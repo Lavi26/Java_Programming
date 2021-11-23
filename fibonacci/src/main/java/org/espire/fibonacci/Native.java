@@ -1,12 +1,28 @@
 package org.espire.fibonacci;
 
+import java.util.Scanner;
+
 public class Native {
 
-    public static void calculate() {
+	public static void main(String args[]) {
 
-    }
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		
+		int num1 = 1, num2 = 1, count;
+		count = scanner.nextInt();
 
-    public static void main(String[] args) {
+		System.out.println("Fibonacci series is:");
 
-    }
+		int i=1;
+		while (i<= count) {
+			System.out.println(num1 + "");
+			int sum = num1 + num2;                  //sum of prev two num
+			num1 = num2;
+			num2 = sum;
+			i++;
+
+		}
+	}
+
 }
