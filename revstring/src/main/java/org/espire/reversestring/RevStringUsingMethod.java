@@ -18,6 +18,7 @@ public class RevStringUsingMethod {
 		System.out.println("Enter a String: ");
 
 		String str = sc.nextLine();
+		
 		str= reverse(str);
 		
 		System.out.println("Reverse of string is:" +str);
