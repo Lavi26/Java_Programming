@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="revstring" />
         <module name="fibonacci" />
+        <module name="primenum" />
+        <module name="armstrongnumber" />
+        <module name="factorial" />
         <module name="java_exercises" />
+        <module name="palindromenumber" />
       </profile>
     </annotationProcessing>
   </component>

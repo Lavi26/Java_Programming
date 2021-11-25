@@ -8,7 +8,12 @@
     <artifactId>java_exercises</artifactId>
     <version>1.0</version>
     <modules>
+        <module>armstrongnumber</module>
+        <module>factorial</module>
         <module>fibonacci</module>
+        <module>palindromenumber</module>
+        <module>primenum</module>
+        <module>revstring</module>
     </modules>
     <packaging>pom</packaging>
 
