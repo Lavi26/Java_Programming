@@ -2,22 +2,17 @@ package org.espire.palindrome;
 
 import java.util.Scanner;
 
-public class PalindromeUsingLibrary{
-	public static void main(String args[]) {
+public class PalindromeUsingLibrary {
+	public static boolean isPalindrome(String s) {
+		if(s.length()==0||s.length()==1)
+			return true;
 		
-		Scanner sc= new Scanner(System.in);
-		System.out.println("Enter a String: ");
+		if (s.charAt(0)==s.charAt(s.length()-1))
+			return isPalindrome(s.substring(1,s.length()-1));
 		
-		String orgStr =sc.nextLine();
-		
-		String revStr= new StringBuilder(orgStr).reverse().toString();
-		
-		if(orgStr.equals(revStr))                      //checking
-			System.out.println("String is Palindrome");
-		else
-			System.out.println("String is not Palindrome");
-		
+		return false;
+
 	}
+
 	
 }
-

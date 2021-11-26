@@ -9,6 +9,9 @@
     <version>1.0</version>
     <modules>
         <module>fibonacci</module>
+        <module>array</module>
+        <module>squareroot</module>
+        <module>binarysearch</module>
     </modules>
     <packaging>pom</packaging>
 

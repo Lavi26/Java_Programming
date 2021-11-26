@@ -3,14 +3,9 @@ package org.espire.armstrong;
 import java.util.Scanner;
 
 public class Armstrong {
-	public static void main(String args[]) {
-
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the number: ");
-
-		int num = scanner.nextInt();
+	public static String calculate(Integer value) {
 		int remainder, total = 0;
-		int orgnumber = num;
+		int orgnumber = value;
 
 		while (orgnumber != 0) {
 			remainder = orgnumber % 10;
@@ -18,10 +13,12 @@ public class Armstrong {
 			orgnumber = orgnumber / 10;
 		}
 
-		if (total == num)
-			System.out.println("Number is Armstrong");
+		if (total == value) 
+			return "number is armstrong";
 		else
-			System.out.println("Number is not Armstrong");
+		    return "number is not armstrong";
 	}
 
+	
+	
 }

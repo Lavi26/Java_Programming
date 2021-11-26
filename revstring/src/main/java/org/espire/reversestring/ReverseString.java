@@ -3,15 +3,13 @@ package org.espire.reversestring;
 import java.util.Scanner;
 
 public class ReverseString {
-
-	public static void main(String args[]) {
-
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a String: ");
-
-		String input = sc.nextLine();
-
-		char[] str = input.toCharArray(); // converting string into char array
+	public static String checkString(String s) {
+		
+		if(s==null) {
+			return s;
+			}
+		
+		char[] str = s.toCharArray(); // converting string into char array
 
 		String reverseInput = ""; // declare empty string
 
@@ -19,10 +17,10 @@ public class ReverseString {
 		{
 			reverseInput = reverseInput + str[i];
 		}
-		
-		System.out.println("Input String is: " +input);
 		System.out.println("Reverse String is: " +reverseInput);
+		return null;
 		
 	}
 
+	
 }

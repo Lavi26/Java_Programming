@@ -3,13 +3,9 @@ package org.espire.primenumber;
 import java.util.Scanner;
 
 public class PrimeOrNot {
-	public static void main(String args[]) {
-
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number: ");
+	public static void checkPrime(int num) {
 		
-        int i,flag=0;
-		int num = sc.nextInt();
+		int i,flag=0;
 		int m= num/2;
 		
 		if(num==0||num==1)
@@ -30,7 +26,11 @@ public class PrimeOrNot {
 			}
 		}
 		
-
 	}
+	
+	
+		
+
+	
 
 }
