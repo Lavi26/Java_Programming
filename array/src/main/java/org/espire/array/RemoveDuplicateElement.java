@@ -1,7 +1,5 @@
 package org.espire.array;
 
-import java.util.Scanner;
-
 public class RemoveDuplicateElement {
 	public static int checkArray(int array[], int n) {
 

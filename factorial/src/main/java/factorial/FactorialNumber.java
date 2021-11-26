@@ -1,8 +1,10 @@
 package factorial;
 
-import java.util.Scanner;
-
 public class FactorialNumber {
+
+	/*
+	 * Giving the factorial of a number
+	 */
 	public static int checkFact(int n) {
 		int i, fact = 1;
 
@@ -12,13 +14,12 @@ public class FactorialNumber {
 		else {
 			for (i = 1; i <= n; i++) {
 				fact = fact * i;
-				
-			}		
+
+			}
 		}
 		System.out.println(+fact);
-		return fact;	
+		return fact;
 
 	}
 
-	
 }

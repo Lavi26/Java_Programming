@@ -7,8 +7,7 @@ public class Armstrong {
 
 	/**
 	 *
-	 * @param value
-	 * @return
+	 * Checking whether number is armstrong or not
 	 */
     public static String calculate(Integer value) {
         int remainder, total = 0;
