@@ -1,8 +1,11 @@
 package org.espire.fibonacci;
 
-import java.util.Scanner;
 
 public class Native {
+	
+	/*
+	 *Giving Fibonacci Series
+	 * */
 	public static int checkFibonacci(int count) {
 		int i=1;
 		int num1 = 1, num2 = 1;

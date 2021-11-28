@@ -16,7 +16,9 @@ public class TestFactorialNumber {
 			FactorialNumber obj= new FactorialNumber();
 			obj.checkFact(num);
 
-				
+			FactorialUsingMethod object = new FactorialUsingMethod();
+			int fact = object.factorial(num);
+			System.out.println("Factorial is " + fact);
 		
 	}
 

@@ -1,8 +1,6 @@
-package squareroot;
+package org.espire.squareroot;
 
 import java.util.Scanner;
-
-import org.espire.squareroot.SquareRoot;
 
 public class TestSquareRoot {
 	public static void main(String args[]) {

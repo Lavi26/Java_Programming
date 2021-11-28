@@ -1,13 +1,19 @@
 package org.espire.squareroot;
 
-import java.util.Scanner;
 
 public class SquareRoot {
+	
+	/*
+	 * Find the Square root of a number
+	 * */
 	public static double checkRoot(int n) {
 		
 		double squareRoot, result;
+		
+		//approximate by half of the given number
 		squareRoot = n / 2;
-
+        
+		//until the approximate value and root value not equal
 		do {
 			result = squareRoot;
 			squareRoot = (result + (n / result)) / 2;

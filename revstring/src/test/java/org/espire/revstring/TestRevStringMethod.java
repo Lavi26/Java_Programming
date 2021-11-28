@@ -1,4 +1,4 @@
-package revstring;
+package org.espire.revstring;
 
 import java.util.Scanner;
 

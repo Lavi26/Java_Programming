@@ -12,8 +12,8 @@ public class TestBinarySearch {
 
 		int array[] = new int[size];
 
+		System.out.println("Enter the elements");
 		for (int i = 0; i < size; i++) {
-			System.out.println("Enter the elements");
 			array[i] = sc.nextInt();
 		}
 
@@ -22,18 +22,9 @@ public class TestBinarySearch {
 			System.out.println("Element= " + array[i]);
 		}
 
-		for (int i = 0; i < size; i++) {
-			for (int j = 1; j < size; j++) {
-				if (array[j - 1] > array[j]) {
-					int temp = array[j];
-					array[j] = array[j - 1];
-					array[j - 1] = temp;
 
-				}
-
-			}
-		}
-
+        SortingArray o= new SortingArray();
+        o.quickSort(array);
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {
 			System.out.println("Element= " + array[i]);

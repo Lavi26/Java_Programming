@@ -9,42 +9,24 @@ public class Armstrong {
 	 *
 	 * Checking whether number is armstrong or not
 	 */
-    public static String calculate(Integer value) {
-        int remainder, total = 0;
-        int orgnumber = value;
-
-        while (orgnumber != 0) {
-            remainder = orgnumber % 10;
-            total = total + remainder * remainder * remainder;
-            orgnumber = orgnumber / 10;
-        }
-
-
-        if (total == value)
-            return "Number is Armstrong";
-        else
-            return "Number is not Armstrong";
-    }
-
-
-    public static void main(String args[]) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number: ");
-
-        int num = scanner.nextInt();
+    public static String calculate(int num) {
+    	
         int remainder, total = 0;
         int orgnumber = num;
-
+        
+        //sum of the cube of each digit until 0
         while (orgnumber != 0) {
             remainder = orgnumber % 10;
             total = total + remainder * remainder * remainder;
             orgnumber = orgnumber / 10;
         }
-
+        
+        //comparing 
         if (total == num)
-            System.out.println("Number is Armstrong");
+           System.out.println("Number is Armstrong");
         else
-            System.out.println("Number is not Armstrong");
+        	System.out.println("Number is  not Armstrong");
+		return null;
     }
+
 }
