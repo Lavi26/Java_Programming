@@ -9,7 +9,7 @@ public class Armstrong {
 	 *
 	 * Checking whether number is armstrong or not
 	 */
-    public static String calculate(int num) {
+    public static boolean calculate(int num) {
     	
         int remainder, total = 0;
         int orgnumber = num;
@@ -23,10 +23,27 @@ public class Armstrong {
         
         //comparing 
         if (total == num)
-           System.out.println("Number is Armstrong");
+           return true;
         else
-        	System.out.println("Number is  not Armstrong");
-		return null;
+        	return false;
+
+    }
+    
+    public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+
+		int num = scanner.nextInt();
+		
+		Armstrong object=new Armstrong();
+		if(object.calculate(num)) {
+			System.out.println("Number is Armstrong");
+		}
+		else {
+			System.out.println("Number is Not Armstrong");
+		}
+		
     }
 
 }
