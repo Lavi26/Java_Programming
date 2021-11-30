@@ -3,8 +3,9 @@ package org.espire.binarysearch;
 import java.util.Scanner;
 
 public class QuickSort {
+	
 	/*
-	 * sorting array using quick sort algorithm
+	 * sorting array using quick sort algorithm using recursion
 	 */
 
 	public static void quickSort(int array[], int first, int last) {
