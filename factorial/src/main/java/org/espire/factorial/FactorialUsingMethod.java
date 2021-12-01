@@ -11,11 +11,10 @@ public class FactorialUsingMethod {
 
 		if (number == 0) {
 			return 1;
-		} else {
-
+		} 
+		else {
 			// checking for each previous number
 			return (number * factorial(number - 1));
-
 		}
 
 	}

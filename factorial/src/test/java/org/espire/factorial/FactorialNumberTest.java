@@ -9,16 +9,24 @@ import org.junit.Test;
 public class FactorialNumberTest {
 
 	@Test
-	public void test() {
-
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number: ");
-		int num = sc.nextInt();
-		System.out.println("Factorial of number is: ");
+	public void factorialNumberTest() {
+		int num = 4;
 
 		FactorialNumber obj = new FactorialNumber();
-		obj.checkFact(num);
-
+		int output = obj.checkFact(num);
+        
+		assertEquals(24,output);
 	}
+	
+	@Test
+	public void factorialMethodTest() {
+		int num = 4;
+
+		FactorialUsingMethod obj = new FactorialUsingMethod();
+		int output = obj.factorial(num);
+        
+		assertEquals(24,output);
+	}
+
 
 }

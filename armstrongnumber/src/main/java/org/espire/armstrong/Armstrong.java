@@ -3,13 +3,11 @@ package org.espire.armstrong;
 import java.util.Scanner;
 
 public class Armstrong {
-
-
 	/**
 	 *
 	 * Checking whether number is armstrong or not
 	 */
-    public static boolean calculate(int num) {
+    public static String calculate(int num) {
     	
         int remainder, total = 0;
         int orgnumber = num;
@@ -23,27 +21,8 @@ public class Armstrong {
         
         //comparing 
         if (total == num)
-           return true;
+           return "Number is Armstrong";
         else
-        	return false;
-
+        	return "Number is not Armstrong";
     }
-    
-    public static void main(String args[]) {
-
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the number: ");
-
-		int num = scanner.nextInt();
-		
-		Armstrong object=new Armstrong();
-		if(object.calculate(num)) {
-			System.out.println("Number is Armstrong");
-		}
-		else {
-			System.out.println("Number is Not Armstrong");
-		}
-		
-    }
-
 }

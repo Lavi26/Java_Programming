@@ -11,17 +11,13 @@ public class SquareRootTest {
 
 	@Test
 	public void test() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number: ");
-		int num = sc.nextInt();
-
-		System.out.println("Enter the expected output: ");
-		double expOutput = sc.nextDouble();
+		
+		int num = 4;
 
 		SquareRoot obj = new SquareRoot();
 		double output= obj.checkRoot(num);
 		
-		assertEquals(expOutput,output);
+		assertEquals(2,output);
 
 	}
 

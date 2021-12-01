@@ -2,30 +2,7 @@ package org.espire.binarysearch;
 
 import java.util.Scanner;
 
-public class BubbleSort {
-
-	// sorting array using bubble sort
-	public static int[] bubbleSort(int a[], int size) {
-
-		int i, j, temp;
-
-		for (i = 0; i < size; i++) {
-
-			for (j = i + 1; j < size; j++) {
-
-				// comparing current element to the next
-				if (a[j] < a[i]) {
-
-					temp = a[i];
-					a[i] = a[j];
-					a[j] = temp;
-
-				}
-			}
-		}
-		return a;
-	}
-
+public class MainClass {
 	public static void main(String args[]) {
 
 		Scanner sc = new Scanner(System.in);
@@ -45,11 +22,27 @@ public class BubbleSort {
 			System.out.println("Element= " + array[i]);
 		}
 
-		bubbleSort(array, size);
+		QuickSort obj = new QuickSort();
+		obj.quickSort(array, 0, size - 1);
 
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {
 			System.out.println("Element= " + array[i]);
+		}
+		
+		System.out.println("Enter the Search value:");
+		int key = sc.nextInt();
+		int last = array.length - 1;
+        
+		//declare the object 
+        
+		BinarySearch object =new BinarySearch();
+		int output = object.binarySearch(array, 0, last, key);
+
+		if (output == -1) {
+			System.out.println("Element is not found");
+		} else {
+			System.out.println("Element is found at " + output);
 		}
 	}
 

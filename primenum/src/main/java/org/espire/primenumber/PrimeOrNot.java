@@ -12,20 +12,18 @@ public class PrimeOrNot {
 		int i, flag = 0;
 		int m = num / 2;
 
-		if (num == 0 || num == 1) {
+		if (num <= 1) {
 			return false;
-		} else {
+		} 
+		else {
 			for (i = 2; i <= m; i++) {
 
 				if (num % i == 0) {
 					return false;
 				}
 			}
-
 			return true;
-
 		}
-
 	}
 
 	public static void main(String args[]) {

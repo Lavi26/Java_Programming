@@ -1,4 +1,4 @@
-package org.espire.binarysearch;
+package org.espire.sorting;
 
 import static org.junit.Assert.*;
 
@@ -6,11 +6,10 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
-public class BinarySearchTest {
+public class QuickSortTest {
 
 	@Test
-	public void quickSortTest() {
-
+	public void test() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of an array");
 
@@ -30,33 +29,9 @@ public class BinarySearchTest {
 		}
 
 		QuickSort obj = new QuickSort();
-		obj.quickSort(array, 0, size-1);
+		obj.quickSort(array, 0, size - 1);
 
 		assertArrayEquals(expArray, array);
-
-	}
-
-	@Test
-	public void binarySearchTest() {
-
-		Scanner scanner = new Scanner(System.in);
-
-		int size = scanner.nextInt();
-
-		int array[] = new int[size];
-
-		System.out.println("Enter the Search value:");
-		int key = scanner.nextInt();
-		int last = size-1;
-
-		System.out.println("Enter the expected output:");
-		int expOutput = scanner.nextInt();
-
-		BinarySearch obj = new BinarySearch();
-		int output = obj.binarySearch(array, 0, last, key);
-
-		assertEquals(expOutput, output);
-
 	}
 
 }

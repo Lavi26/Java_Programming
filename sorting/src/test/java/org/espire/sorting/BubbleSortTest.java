@@ -1,4 +1,4 @@
-package org.espire.binarysearch;
+package org.espire.sorting;
 
 import static org.junit.Assert.*;
 
@@ -6,10 +6,11 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
-public class QuickSortTest {
+public class BubbleSortTest {
 
 	@Test
 	public void test() {
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of an array");
 
@@ -28,10 +29,11 @@ public class QuickSortTest {
 			expArray[i] = sc.nextInt();
 		}
 		
-		QuickSort obj = new QuickSort();
-		obj.quickSort(array, 0, size - 1);
+		BubbleSort obj = new BubbleSort();
+		obj.bubbleSort(array, size);
 		
 		assertArrayEquals(expArray,array);
+		
 	}
 
 }

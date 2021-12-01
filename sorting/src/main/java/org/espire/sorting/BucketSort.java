@@ -3,10 +3,10 @@ package org.espire.sorting;
 import java.util.Scanner;
 
 public class BucketSort {
-
+	 
 	/*
 	 * Sorting array using bucket sort algo
-	 */
+	 * */
 	public static void bucketSort(int array[]) {
 
 		// max is the maximum element

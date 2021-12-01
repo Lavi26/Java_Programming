@@ -9,19 +9,25 @@ import org.junit.Test;
 public class ReverseStringTest {
 
 	@Test
-	public void test() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a String: ");
-
-		String input = sc.nextLine();
-        
-		System.out.println("Enter expected output: ");
-		String expOutput = sc.nextLine();
+	public void reverseStringTest() {
+		
+		String str="abc";
 		
 		ReverseString obj = new ReverseString();
-		String output= obj.checkString(input);
+		String output= obj.checkString(str);
 		
-		assertEquals(expOutput,output);
+		assertEquals("cba",output);
+	}
+	
+	@Test
+	public void reverseStringMethodTest() {
+		
+		String str="abc";
+		
+		RevStringUsingMethod obj = new RevStringUsingMethod();
+		String output= obj.reverse(str);
+		
+		assertEquals("cba",output);
 	}
 
 }

@@ -13,6 +13,8 @@ public class MainClassTest {
 		
 		MainClass obj = new MainClass();
 		obj.main(null);
+		
+		
 
 	}
 

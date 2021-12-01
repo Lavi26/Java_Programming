@@ -13,8 +13,9 @@ public class RevStringUsingMethod {
 			return str;
 		}
 
-		// last char + recur for remaining string
-		return str.charAt(str.length() - 1) + reverse(str.substring(0, str.length() - 1));
+		// last char + recurse for remaining string
+		String s = str.charAt(str.length() - 1) + reverse(str.substring(0, str.length() - 1));
+		return s;
 	}
 
 	public static void main(String args[]) {

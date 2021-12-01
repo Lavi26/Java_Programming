@@ -1,32 +1,29 @@
-package org.espire.binarysearch;
+package org.espire.sorting;
 
 import java.util.Scanner;
 
-public class InsertionSort {
+public class BubbleSort {
 
-	/*
-	 * insertion sort function
-	 */
-	public static void insertionSort(int array[]) {
+	// sorting array using bubble sort
+	public static int[] bubbleSort(int a[], int size) {
 
-		int len = array.length;
 		int i, j, temp;
 
-		for (i = 1; i < len; i++) {
+		for (i = 0; i < size; i++) {
 
-			temp = array[i];
-			j = i - 1;
+			for (j = i + 1; j < size; j++) {
 
-			// compare with each element on the left until the smaller element found
-			while (j >= 0 && temp <= array[j]) {
+				// comparing current element to the next
+				if (a[j] < a[i]) {
 
-				array[j + 1] = array[j];
-				j = j - 1;
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+
+				}
 			}
-
-			// place temp just after the smaller element
-			array[j + 1] = temp;
 		}
+		return a;
 	}
 
 	public static void main(String args[]) {
@@ -48,7 +45,7 @@ public class InsertionSort {
 			System.out.println("Element= " + array[i]);
 		}
 
-		insertionSort(array);
+		bubbleSort(array, size);
 
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {

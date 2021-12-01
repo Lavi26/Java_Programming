@@ -8,8 +8,9 @@ public class PalindromeUsingLibrary {
 	 * checcking whether string is palindrome using methods
 	 */
 	public static boolean isPalindrome(String s) {
-		if (s.length() == 0 || s.length() == 1)
+		if (s.length() <= 1) {
 			return true;
+		}
 
 		// pointing to last and extract the remaining string in reverse
 		if (s.charAt(0) == s.charAt(s.length() - 1))
@@ -23,7 +24,6 @@ public class PalindromeUsingLibrary {
 	public static void main(String args[]) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a String: ");
 
 		String orgStr = sc.nextLine();
 		PalindromeUsingLibrary obj = new PalindromeUsingLibrary();

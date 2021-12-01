@@ -14,7 +14,7 @@ public class SquareRoot {
 		// approximate by half of the given number
 		squareRoot = n / 2;
 
-		// until the approximate value and root value not equal
+		// until the difference of approximate value and root value is not equal to 0
 		do {
 			result = squareRoot;
 			squareRoot = (result + (n / result)) / 2;

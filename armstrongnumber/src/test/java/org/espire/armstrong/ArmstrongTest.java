@@ -10,17 +10,13 @@ public class ArmstrongTest {
 
 	@Test
 	public void test() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the number: ");
-		int num = scanner.nextInt();
-	    
-		System.out.println("Enter the expected output: ");
-		boolean expOutput = scanner.nextBoolean();
+		
+		int num=407;
 		
 		Armstrong object = new Armstrong();
-		boolean output = object.calculate(num);
+		String output = object.calculate(num);
 		
-		assertEquals(expOutput,output);
+		assertEquals("Number is Armstrong",output);
 		
 	}
 

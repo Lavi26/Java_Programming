@@ -1,4 +1,4 @@
-package org.espire.binarysearch;
+package org.espire.sorting;
 
 import java.util.Scanner;
 
