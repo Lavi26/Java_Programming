@@ -21,6 +21,7 @@
         <module>revstring</module>
 
         <module>sorting</module>
+        <module>linkedlist</module>
     </modules>
     <packaging>pom</packaging>
 
