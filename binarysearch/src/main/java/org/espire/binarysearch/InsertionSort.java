@@ -48,8 +48,7 @@ public class InsertionSort {
 			System.out.println("Element= " + array[i]);
 		}
 
-		InsertionSort obj = new InsertionSort();
-		obj.insertionSort(array);
+		insertionSort(array);
 
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {

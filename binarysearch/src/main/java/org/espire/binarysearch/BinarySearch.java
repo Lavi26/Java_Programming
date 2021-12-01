@@ -70,8 +70,8 @@ public class BinarySearch {
 		int last = array.length - 1;
         
 		//declare the object 
-		BinarySearch obj = new BinarySearch();
-		int output = obj.binarySearch(array, 0, last, key);
+
+		int output = binarySearch(array, 0, last, key);
 
 		if (output == -1) {
 			System.out.println("Element is not found");

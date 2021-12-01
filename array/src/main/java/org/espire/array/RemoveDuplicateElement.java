@@ -4,6 +4,7 @@ public class RemoveDuplicateElement {
 	
 	/*
 	 * Remove Duplicate Element From An Array
+	 * n is the size of array[]
 	 * */
 	
 	public static int checkArray(int array[], int n) {

@@ -85,8 +85,8 @@ public class HeapSort {
 			System.out.println("Element= " + array[i]);
 		}
 
-		HeapSort obj = new HeapSort();
-		obj.heapSort(array, size);
+		
+		heapSort(array, size);
 
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {

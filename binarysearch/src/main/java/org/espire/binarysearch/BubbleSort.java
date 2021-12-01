@@ -45,8 +45,7 @@ public class BubbleSort {
 			System.out.println("Element= " + array[i]);
 		}
 
-		BubbleSort obj = new BubbleSort();
-		obj.bubbleSort(array, size);
+		bubbleSort(array, size);
 
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {

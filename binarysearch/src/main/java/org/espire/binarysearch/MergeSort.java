@@ -99,8 +99,7 @@ public class MergeSort {
 			System.out.println("Element= " + array[i]);
 		}
 
-		MergeSort obj = new MergeSort();
-		obj.mergeSort(array, 0, size - 1);
+		mergeSort(array, 0, size - 1);
 
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {

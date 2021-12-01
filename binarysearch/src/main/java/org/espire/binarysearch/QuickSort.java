@@ -3,7 +3,7 @@ package org.espire.binarysearch;
 import java.util.Scanner;
 
 public class QuickSort {
-	
+
 	/*
 	 * sorting array using quick sort algorithm using recursion
 	 */
@@ -79,8 +79,7 @@ public class QuickSort {
 			System.out.println("Element= " + array[i]);
 		}
 
-		QuickSort obj = new QuickSort();
-		obj.quickSort(array, 0, size - 1);
+		quickSort(array, 0, size - 1);
 
 		System.out.println("After sorting");
 		for (int i = 0; i < size; i++) {
