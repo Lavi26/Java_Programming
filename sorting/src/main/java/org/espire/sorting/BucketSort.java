@@ -1,12 +1,13 @@
 package org.espire.sorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BucketSort {
-	 
+
 	/*
 	 * Sorting array using bucket sort algo
-	 * */
+	 */
 	public static void bucketSort(int array[]) {
 
 		// max is the maximum element
@@ -52,34 +53,15 @@ public class BucketSort {
 		}
 		return maxValue;
 	}
-    
-	//Main Method
+
+	// Main Method
 	public static void main(String args[]) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the size of an array");
+		int array[] = { 6, 8, 4, 3, 5, 7 };
 
-		int size = sc.nextInt();
+		BucketSort.bucketSort(array);
+		System.out.println(Arrays.toString(array));
 
-		int array[] = new int[size];
-
-		System.out.println("Enter the elements");
-		for (int i = 0; i < size; i++) {
-			array[i] = sc.nextInt();
-		}
-
-		System.out.println("Before sorting");
-		for (int i = 0; i < size; i++) {
-			System.out.println("Element= " + array[i]);
-		}
-
-		BucketSort obj = new BucketSort();
-		obj.bucketSort(array);
-
-		System.out.println("After sorting");
-		for (int i = 0; i < size; i++) {
-			System.out.println("Element= " + array[i]);
-		}
 	}
 
 }

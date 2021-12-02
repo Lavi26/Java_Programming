@@ -20,20 +20,13 @@ public class SquareRoot {
 			squareRoot = (result + (n / result)) / 2;
 		} while ((result - squareRoot) != 0);
 
-		System.out.println("Square Root of the number is: " + squareRoot);
-		return squareRoot;
-		
+		return squareRoot;	
 
 	}
 
 	public static void main(String args[]) {
-
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number: ");
-
-		int num = sc.nextInt();
 		
-		checkRoot(num);
+		System.out.println(SquareRoot.checkRoot(4));
 
 	}
 }

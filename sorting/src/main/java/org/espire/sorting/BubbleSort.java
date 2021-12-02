@@ -1,56 +1,38 @@
 package org.espire.sorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BubbleSort {
 
 	// sorting array using bubble sort
-	public static int[] bubbleSort(int a[], int size) {
+	public static void bubbleSort(Integer[] array) {
 
 		int i, j, temp;
 
-		for (i = 0; i < size; i++) {
+		for (i = 0; i < array.length; i++) {
 
-			for (j = i + 1; j < size; j++) {
+			for (j = i + 1; j < array.length; j++) {
 
 				// comparing current element to the next
-				if (a[j] < a[i]) {
+				if (array[j] < array[i]) {
 
-					temp = a[i];
-					a[i] = a[j];
-					a[j] = temp;
-
+					temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
 				}
 			}
 		}
-		return a;
 	}
 
 	public static void main(String args[]) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the size of an array");
+		Integer array[] = { 4, 8, 2, 5, 6 };
+		
+		BubbleSort.bubbleSort(array);
 
-		int size = sc.nextInt();
+		System.out.println(Arrays.toString(array));
 
-		int array[] = new int[size];
-
-		System.out.println("Enter the elements");
-		for (int i = 0; i < size; i++) {
-			array[i] = sc.nextInt();
-		}
-
-		System.out.println("Before sorting");
-		for (int i = 0; i < size; i++) {
-			System.out.println("Element= " + array[i]);
-		}
-
-		bubbleSort(array, size);
-
-		System.out.println("After sorting");
-		for (int i = 0; i < size; i++) {
-			System.out.println("Element= " + array[i]);
-		}
 	}
 
 }

@@ -14,20 +14,14 @@ public class RevStringUsingMethod {
 		}
 
 		// last char + recurse for remaining string
-		String s = str.charAt(str.length() - 1) + reverse(str.substring(0, str.length() - 1));
-		return s;
+		return str.charAt(str.length() - 1) + reverse(str.substring(0, str.length() - 1));
+		
 	}
 
 	public static void main(String args[]) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a String: ");
 
-		String str = sc.nextLine();
-		
-		str = reverse(str);
-
-		System.out.println("Reverse of string is:" + str);
+		System.out.println(RevStringUsingMethod.reverse("abcd"));
 	}
 
 }

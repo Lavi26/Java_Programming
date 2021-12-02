@@ -1,8 +1,42 @@
-package org.espire.binarysearch;
+package org.espire.array;
 
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
-public class QuickSort {
+public class RemoveDuplicacyInArray {
+
+	/*
+	 * Remove Duplicate Element From An Array n is the size of array[]
+	 */
+	public static int removeDuplicates(int[] array) {
+
+		int n = array.length;
+
+		if (n == 0 || n == 1) {
+			return n;
+		}
+
+		int k = 0;
+		int comp[] = new int[n];
+
+		// checking the element..whether it is not equal to the next element
+		// store the elements in the temporary array
+		for (int i = 0; i < n - 1; i++) {
+			if (array[i] != array[i + 1]) {
+				comp[k] = array[i];
+				k++;
+			}
+		}
+
+		comp[k] = array[n - 1];
+		k++;
+
+		// store the element of temporary array into original array
+		for (int i = 0; i < k; i++) {
+			array[i] = comp[i];
+		}
+		return k ;
+	}
 
 	/*
 	 * sorting array using quick sort algorithm using recursion
@@ -60,4 +94,13 @@ public class QuickSort {
 
 	}
 
+	public static void main(String[] args) {
+		int[] array = { 1, 4, 3, 5, 7, 5 };
+		
+		RemoveDuplicacyInArray.quickSort(array, 0,array.length -1);
+		System.out.println(Arrays.toString(array));
+
+		RemoveDuplicacyInArray.removeDuplicates(array);
+		System.out.println(Arrays.toString(array));
+	}
 }

@@ -20,13 +20,8 @@ public class FactorialUsingMethod {
 	}
 
 	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number: ");
 
-		int number = sc.nextInt();
-
-		int fact = factorial(number);
-		System.out.println("Factorial is " + fact);
+		System.out.println("Factorial is " + FactorialUsingMethod.factorial(5));
 
 	}
 

@@ -21,11 +21,11 @@ public class StringPalindrome {
         }
         // comparing
         if (s.equals(reverseInput)) {
-            System.out.println("String is Palindrome");
+            return "String is Palindrome";
         } else {
-            System.out.println("String is not Palindrome");
+            return "String is not Palindrome";
         }
-        return reverseInput;
+        
     }
 
     public static void main(String args[]) {

@@ -6,17 +6,13 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
-public class NativeTest {
+public class FibonacciSeriesTest {
 
 	@Test
 	public void test() {
 		
-		int count1= 7 ;
-		
-		Native obj = new Native();
-		int output= obj.checkFibonacci(count1);
-		
-		assertNotNull(output);
+		assertNotNull(FibonacciSeries.checkFibonacci(7));
+		assertNotNull(FibonacciSeries.checkFibonacci(5));
 	}
 
 }

@@ -28,19 +28,9 @@ public class PrimeOrNot {
 
 	public static void main(String args[]) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number: ");
-		int num = sc.nextInt();
-
-		checkPrime(num);
+		System.out.println(PrimeOrNot.checkPrime(5));
 		
-		if(checkPrime(num)) {
-			System.out.println("Number is Prime");
-		}
-		else {
-			System.out.println("Number is Not Prime");
-		}
-
+		
 	}
 
 }

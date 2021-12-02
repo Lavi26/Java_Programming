@@ -11,12 +11,8 @@ public class PrimeOrNotTest {
 	@Test
 	public void test() {
 		
-		int num = 3;
-
-		PrimeOrNot object = new PrimeOrNot();
-		boolean output= object.checkPrime(num);
-		
-		assertEquals(true,output);
+		assertEquals(true,PrimeOrNot.checkPrime(5));
+		assertEquals(true,PrimeOrNot.checkPrime(3));
 
 	}
 

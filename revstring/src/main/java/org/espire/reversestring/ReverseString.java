@@ -23,20 +23,13 @@ public class ReverseString {
 		for (int i = str.length - 1; i >= 0; i--) {
 			reverseInput = reverseInput + str[i];
 		}
-		System.out.println("Reverse String is: " + reverseInput);
 		return reverseInput;
 		
-
 	}
 
 	public static void main(String args[]) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a String: ");
-
-		String input = sc.nextLine();
-
-		checkString(input);
+		System.out.println(ReverseString.checkString("abc"));
 		
 
 	}

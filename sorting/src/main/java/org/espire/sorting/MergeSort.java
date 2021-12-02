@@ -1,6 +1,6 @@
 package org.espire.sorting;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 /*
  * sorting array using merge sort algo
@@ -82,29 +82,12 @@ public class MergeSort {
 
 	public static void main(String args[]) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the size of an array");
 
-		int size = sc.nextInt();
+		int array[] = { 6, 8, 4, 3, 5, 7 };
 
-		int array[] = new int[size];
-
-		System.out.println("Enter the elements");
-		for (int i = 0; i < size; i++) {
-			array[i] = sc.nextInt();
-		}
-
-		System.out.println("Before sorting");
-		for (int i = 0; i < size; i++) {
-			System.out.println("Element= " + array[i]);
-		}
-
-		mergeSort(array, 0, size - 1);
-
-		System.out.println("After sorting");
-		for (int i = 0; i < size; i++) {
-			System.out.println("Element= " + array[i]);
-		}
+		MergeSort.mergeSort(array, 0, array.length -1);
+		System.out.println(Arrays.toString(array));
+		
 	}
 
 }

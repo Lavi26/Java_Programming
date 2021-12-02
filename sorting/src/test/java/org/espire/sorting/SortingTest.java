@@ -2,35 +2,33 @@ package org.espire.sorting;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class SortingTest {
 
 	@Test
 	public void bubbleSorttest() {
+
+		Integer array[] = {4,6,2,3,1,8};
+		Integer expArray[]= {1,2,3,4,6,8};
 		
-		int size= 4;
-		int array[]= {2,4,3,5};
-		
-		BubbleSort obj = new BubbleSort();
-		int[] output= obj.bubbleSort(array, size);
-		
-		int expArray[]= {2,3,4,5};
-		assertArrayEquals(expArray,output);
+		BubbleSort.bubbleSort(array);
+		System.out.println(Arrays.toString(array));
+		assertArrayEquals(expArray,array);
 		
 	}
 	
 	@Test
 	public void bucketSorttest() {
 		
-		int array[]= {2,4,3,5};
+		int array[] = {4,6,2,3,1,8};
+		int expArray[]= {1,2,3,4,6,8};
 		
-		BucketSort obj = new BucketSort();
-		obj.bucketSort(array);
-		
-		int expArray[]= {2,3,4,5};
+		BucketSort.bucketSort(array);
+		System.out.println(Arrays.toString(array));
 		assertArrayEquals(expArray,array);
-		
 	}
 	
 	@Test
@@ -40,7 +38,7 @@ public class SortingTest {
 		int array[]= {2,4,3,5};
 		
 		HeapSort obj = new HeapSort();
-		obj.heapSort(array, size);
+		obj.heapSort(array);
 		
 		int expArray[]= {2,3,4,5};
 		assertArrayEquals(expArray,array);

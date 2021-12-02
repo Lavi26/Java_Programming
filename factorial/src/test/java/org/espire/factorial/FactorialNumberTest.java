@@ -10,22 +10,16 @@ public class FactorialNumberTest {
 
 	@Test
 	public void factorialNumberTest() {
-		int num = 4;
-
-		FactorialNumber obj = new FactorialNumber();
-		int output = obj.checkFact(num);
         
-		assertEquals(24,output);
+		assertEquals(120,FactorialNumber.checkFact(5));
+		assertEquals(5040,FactorialNumber.checkFact(7));
 	}
 	
 	@Test
 	public void factorialMethodTest() {
-		int num = 4;
-
-		FactorialUsingMethod obj = new FactorialUsingMethod();
-		int output = obj.factorial(num);
         
-		assertEquals(24,output);
+		assertEquals(120,FactorialUsingMethod.factorial(5));
+		assertEquals(5040,FactorialUsingMethod.factorial(7));
 	}
 
 

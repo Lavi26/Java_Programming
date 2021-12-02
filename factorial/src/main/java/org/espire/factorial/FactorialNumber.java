@@ -25,13 +25,10 @@ public class FactorialNumber {
 	}
 
 	public static void main(String args[]) {
+		
+		int num = 5;
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number: ");
-		int num = sc.nextInt();
-		System.out.println("Factorial of number is: ");
-
-		checkFact(num);
+		FactorialNumber.checkFact(num);
 
 	}
 

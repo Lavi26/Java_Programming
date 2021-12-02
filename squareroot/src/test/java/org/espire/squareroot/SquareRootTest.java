@@ -11,13 +11,8 @@ public class SquareRootTest {
 
 	@Test
 	public void test() {
-		
-		int num = 4;
-
-		SquareRoot obj = new SquareRoot();
-		double output= obj.checkRoot(num);
-		
-		assertEquals(2,output);
+		double value= 2.0;
+		assertEquals(value,SquareRoot.checkRoot(4));
 
 	}
 

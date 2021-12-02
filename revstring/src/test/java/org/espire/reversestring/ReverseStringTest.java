@@ -11,23 +11,14 @@ public class ReverseStringTest {
 	@Test
 	public void reverseStringTest() {
 		
-		String str="abc";
-		
-		ReverseString obj = new ReverseString();
-		String output= obj.checkString(str);
-		
-		assertEquals("cba",output);
+		assertEquals("cba",ReverseString.checkString("abc"));
+		assertEquals("edcba",ReverseString.checkString("abcde"));
 	}
 	
 	@Test
 	public void reverseStringMethodTest() {
 		
-		String str="abc";
-		
-		RevStringUsingMethod obj = new RevStringUsingMethod();
-		String output= obj.reverse(str);
-		
-		assertEquals("cba",output);
+		assertEquals("zyx",RevStringUsingMethod.reverse("xyz"));
 	}
 
 }
