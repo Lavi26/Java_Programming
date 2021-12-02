@@ -26,9 +26,8 @@ public class PalindromeUsingLibrary {
 		Scanner sc = new Scanner(System.in);
 
 		String orgStr = sc.nextLine();
-		PalindromeUsingLibrary obj = new PalindromeUsingLibrary();
 
-		if (obj.isPalindrome(orgStr)) // checking
+		if (isPalindrome(orgStr)) // checking
 			System.out.println("String is Palindrome");
 		else
 			System.out.println("String is not Palindrome");

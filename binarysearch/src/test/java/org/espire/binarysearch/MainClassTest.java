@@ -8,7 +8,7 @@ public class MainClassTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		
 	}
 
 }

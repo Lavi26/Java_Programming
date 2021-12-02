@@ -25,8 +25,7 @@ public class FactorialUsingMethod {
 
 		int number = sc.nextInt();
 
-		FactorialUsingMethod object = new FactorialUsingMethod();
-		int fact = object.factorial(number);
+		int fact = factorial(number);
 		System.out.println("Factorial is " + fact);
 
 	}

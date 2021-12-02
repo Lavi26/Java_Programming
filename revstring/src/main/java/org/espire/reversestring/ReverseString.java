@@ -36,8 +36,7 @@ public class ReverseString {
 
 		String input = sc.nextLine();
 
-		ReverseString obj = new ReverseString();
-		obj.checkString(input);
+		checkString(input);
 		
 
 	}

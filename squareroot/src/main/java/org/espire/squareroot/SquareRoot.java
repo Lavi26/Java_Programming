@@ -32,8 +32,8 @@ public class SquareRoot {
 		System.out.println("Enter the number: ");
 
 		int num = sc.nextInt();
-		SquareRoot obj = new SquareRoot();
-		obj.checkRoot(num);
+		
+		checkRoot(num);
 
 	}
 }

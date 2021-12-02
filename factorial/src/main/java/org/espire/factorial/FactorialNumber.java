@@ -31,8 +31,7 @@ public class FactorialNumber {
 		int num = sc.nextInt();
 		System.out.println("Factorial of number is: ");
 
-		FactorialNumber obj = new FactorialNumber();
-		obj.checkFact(num);
+		checkFact(num);
 
 	}
 

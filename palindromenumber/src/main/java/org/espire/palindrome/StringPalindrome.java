@@ -35,8 +35,7 @@ public class StringPalindrome {
 
 		String input = sc.nextLine();
 
-		StringPalindrome object = new StringPalindrome();
-		object.isPalindrome(input);
+		isPalindrome(input);
 
 	}
 

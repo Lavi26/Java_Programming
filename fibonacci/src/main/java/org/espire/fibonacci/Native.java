@@ -28,8 +28,7 @@ public class Native {
 		int count1 = scanner.nextInt();
 		System.out.println("Fibonacci series is:");
 
-		Native obj = new Native();
-		obj.checkFibonacci(count1);
+		checkFibonacci(count1);
 
 	}
 

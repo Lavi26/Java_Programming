@@ -32,10 +32,9 @@ public class PrimeOrNot {
 		System.out.println("Enter a number: ");
 		int num = sc.nextInt();
 
-		PrimeOrNot object = new PrimeOrNot();
-		object.checkPrime(num);
+		checkPrime(num);
 		
-		if(object.checkPrime(num)) {
+		if(checkPrime(num)) {
 			System.out.println("Number is Prime");
 		}
 		else {
