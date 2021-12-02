@@ -9,8 +9,13 @@
         <module name="revstring" />
         <module name="fibonacci" />
         <module name="primenum" />
+        <module name="linkedlist" />
+        <module name="binarysearch" />
+        <module name="array" />
         <module name="armstrongnumber" />
         <module name="factorial" />
+        <module name="sorting" />
+        <module name="squareroot" />
         <module name="java_exercises" />
         <module name="palindromenumber" />
       </profile>

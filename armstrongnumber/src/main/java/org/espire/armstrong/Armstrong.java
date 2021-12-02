@@ -1,28 +1,27 @@
 package org.espire.armstrong;
 
-import java.util.Scanner;
-
 public class Armstrong {
-	/**
-	 *
-	 * Checking whether number is armstrong or not
-	 */
-    public static String calculate(int num) {
-    	
+    /**
+     * Checking whether number is armstrong or not
+     */
+    public static Boolean calculate(int num) {
+
+        Boolean status = Boolean.FALSE;
         int remainder, total = 0;
-        int orgnumber = num;
-        
+        Integer value = num;
         //sum of the cube of each digit until 0
-        while (orgnumber != 0) {
-            remainder = orgnumber % 10;
+        while (num != 0) {
+            remainder = num % 10;
             total = total + remainder * remainder * remainder;
-            orgnumber = orgnumber / 10;
+            num = num / 10;
         }
-        
-        //comparing 
-        if (total == num)
-           return "Number is Armstrong";
-        else
-        	return "Number is not Armstrong";
+        //comparing
+        if (total == value)
+            status = Boolean.TRUE;
+        return status;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Armstrong.calculate(407));
     }
 }
