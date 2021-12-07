@@ -12,7 +12,7 @@ public class SquareRootTest {
 	@Test
 	public void test() {
 		double value= 2.0;
-		assertEquals(value,SquareRoot.checkRoot(4));
+		assertEquals(2.0,SquareRoot.checkRoot(4),2.0);
 
 	}
 

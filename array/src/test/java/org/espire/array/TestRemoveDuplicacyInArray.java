@@ -24,6 +24,7 @@ public class TestRemoveDuplicacyInArray {
 		int[] array = {1, 67, 3, 4, 5, 67, 7, 96};
 		int[] sorted = {1, 3, 4, 5, 7, 67, 96};
 		RemoveDuplicacyInArray.removeDuplicates(array);
+		
 		System.out.println(Arrays.toString(array));
 		assertArrayEquals(sorted,array);
 	}

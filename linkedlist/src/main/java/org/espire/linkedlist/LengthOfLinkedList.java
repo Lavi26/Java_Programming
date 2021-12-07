@@ -1,18 +1,16 @@
 package org.espire.linkedlist;
 
-import java.util.Scanner;
-
 /*
  * finding length of the linked list
  * */
 public class LengthOfLinkedList {
 
 	// head and tail of list
-	public static Node head;
-	public static Node tail;
+	private static Node head;
+	private static Node tail;
 
 	// initialization of node
-	static class Node {
+	private static class Node {
 		
 		int data;
 		
@@ -28,6 +26,17 @@ public class LengthOfLinkedList {
 		}
 
 	}
+	
+	//to display the list
+	public static void printList() {
+		Node current=head;
+		while(current!=null) {
+			System.out.println("" + current.data);
+			current=current.next;	
+		}
+		System.out.println("null"); 
+		
+	}
     	
 	//add new node in the list
 	public static void addNode(int data) {
@@ -38,9 +47,9 @@ public class LengthOfLinkedList {
 		// check if list is empty
 		if (head == null) {
 
-			// if list is empty head n tail pointing new node
+			// if list is empty head and tail pointing new node
 			head = newNode;
-			tail = newNode;
+			tail=newNode;
 
 		} else {
 
@@ -60,6 +69,11 @@ public class LengthOfLinkedList {
 		//current pointing head
 		Node current = head;
 		
+		if(head==null && current.next==null) {
+			System.out.println("List is empty");
+			return 0;
+		}
+		
 		//until current not equal to null..., count increases and current pointing to the next
 		while(current!=null) {
 			count++;
@@ -70,23 +84,16 @@ public class LengthOfLinkedList {
 		
 	}
 	
+	
 	public static void main (String args[]) {
 		
-		Scanner scanner = new Scanner(System.in)
-				;
-		System.out.println("How many element you want to add:");
-		int num = scanner.nextInt();
+		addNode(2);
+		addNode(3);
+		addNode(4);
 		
-		System.out.println("Add element:");
-		for(int i=0; i<num;i++) {
-			
-			int data= scanner.nextInt();
-			addNode(data);
-			
-		}
+		printList();
 		
-		//list.countNode();
-		System.out.println("Length of the list is equal to:"+ countNode() );
+		System.out.println("Length of the list is equal to:"+ LengthOfLinkedList.countNode());
 	}
 
 }

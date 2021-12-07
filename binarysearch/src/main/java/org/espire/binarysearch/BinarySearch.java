@@ -14,7 +14,7 @@ public class BinarySearch {
 		if (first <= last) {
 
 			// initialize a variable and store the value of mid index
-			int mid = (first + last) / 2;
+			int mid = first + (last-first) / 2;
 
 			// Here three conditions are occur
 			// whether mid index value equal to key value....get the position
@@ -98,7 +98,7 @@ public class BinarySearch {
 		BinarySearch.quickSort(array, 0, array.length - 1);
 		System.out.println(Arrays.toString(array));
 
-		int searchKey = 20;
+		int searchKey = 30;
 
 		int output = BinarySearch.binarySearch(array, 0, array.length -1, searchKey);
 		if (output == -1) {

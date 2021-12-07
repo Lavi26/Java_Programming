@@ -1,17 +1,16 @@
 package org.espire.linkedlist;
 
-import java.util.Scanner;
 
 public class ReverseLinkedList {
 
-	// head and tail of list
-	public static Node head;
-	public static Node tail;
-
-	// initialization
+	// head of list
+	static Node head;
+	private static Node tail;
+	
+	// class for creating node
 	static class Node {
-
-		int data;
+		// data
+		private int data;
 
 		// reference to next node
 		Node next;
@@ -25,60 +24,74 @@ public class ReverseLinkedList {
 		}
 
 	}
+	
+	//add new node in the list
+		public static void addNode(int data) {
 
-	// add new node in the list
-	public static void addNode(int data) {
+			// create new node
+			Node newNode = new Node(data);
 
-		// create new node
-		Node newNode = new Node(data);
+			// check if list is empty
+			if (head == null) {
 
-		// check if list is empty
-		if (head == null) {
+				// if list is empty head and tail pointing new node
+				head = newNode;
+				tail=newNode;
 
-			// if list is empty head n tail pointing new node
-			head = newNode;
-			tail = newNode;
+			} else {
 
-		} else {
+				// new node added next to the tail
+				tail.next = newNode;
 
-			// new node added next to the tail
-			tail.next = newNode;
-
-			// tail pointing to new node
-			tail = newNode;
+				// tail pointing to new node
+				tail = newNode;
+			}
 		}
-	}
+		
+	
+	//to display the list
+		public static void printList(Node head) {
+			if(head == null) {
+				return;
+			}
+			while(head!=null) {
+				System.out.println("" + head.data);
+				head=head.next;	
+			}
+			
+		}
 
-	public static void reverseList(Node current) {
+	
+	public static Node reverseList(Node head) {
 		
 		if(head==null) {
-			System.out.println("List is empty");
+			return null;
 		}
-		else {
-			
-		reverseList(current.next);
-		
-		System.out.println(""+ current.data);
+
+		Node current = head;
+		Node previous = null;
+		Node next=null;
+
+		while (current != null) {
+			next = current.next;
+			current.next = previous;
+			previous = current;
+			current = next;
 		}
+
+		return previous;
+
 	}
 
 	public static void main(String args[]) {
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("How many element you want to add:");
-		int num = scanner.nextInt();
-
-		System.out.println("Add element:");
-
-		for (int i = 0; i < num; i++) {
-
-			int data = scanner.nextInt();
-			addNode(data);
-
-		}
+		ReverseLinkedList.head= new Node(10);
+		ReverseLinkedList.head.next= new Node(20);
+		ReverseLinkedList.head.next.next= new Node(30);
 		
-	    reverseList(head);
-
-		System.out.println("Reverse of the LinkedList is:" );
+		ReverseLinkedList.printList(head);
+		
+		Node reverse = ReverseLinkedList.reverseList(head);
+		ReverseLinkedList.printList(reverse);
 	}
 }

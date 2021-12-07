@@ -1,6 +1,5 @@
 package org.espire.array;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class RemoveDuplicacyInArray {
@@ -28,7 +27,7 @@ public class RemoveDuplicacyInArray {
 			}
 		}
 
-		comp[k] = array[n - 1];
+		comp[k] = array[n-1];
 		k++;
 
 		// store the element of temporary array into original array
