@@ -23,6 +23,7 @@
 		<module>sorting</module>
 		<module>linkedlist</module>
 		<module>StringPermutation</module>
+		<module>binarytree</module>
 	</modules>
 	<packaging>pom</packaging>
 
