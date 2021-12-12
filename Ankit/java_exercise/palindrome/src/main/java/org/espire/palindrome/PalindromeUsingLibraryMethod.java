@@ -38,6 +38,7 @@ public class PalindromeUsingLibraryMethod {
 		//Taking input
 		String input=sc.nextLine();
 		
+		//Checking and then printing the output
 		if(isPalindrome(input)) {
 			System.out.println("String is palindrome");
 		}
