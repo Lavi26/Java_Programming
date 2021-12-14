@@ -13,5 +13,8 @@
   <modules>
   	<module>palindrome</module>
     <module>armstrongnumber</module>
+    <module>deadlockavoiding</module>
+    <module>factorial</module>
+    <module>reversestring</module>
   </modules>
 </project>
