@@ -11,5 +11,6 @@
 </properties>
   <modules>
   	<module>palindrome</module>
+  	<module>reverse_string</module>
   </modules>
 </project>
