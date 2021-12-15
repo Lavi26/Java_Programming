@@ -16,5 +16,7 @@
     <module>deadlockavoiding</module>
     <module>factorial</module>
     <module>reversestring</module>
+    <module>removeduplicates</module>
+    <module>insertionsort</module>
   </modules>
 </project>
