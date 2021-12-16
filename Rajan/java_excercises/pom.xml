@@ -5,6 +5,15 @@
   <version>1.0</version>
   <packaging>pom</packaging>
   <name>java_excercises</name>
+  <dependencies>
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.13.2</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
   <properties>
 <maven.compiler.source>11</maven.compiler.source>
 <maven.compiler.targer>11</maven.compiler.targer>
@@ -12,5 +21,8 @@
   <modules>
   	<module>palindrome</module>
   	<module>reverse_string</module>
+  	<module>squareroot</module>
+  	<module>armstrong</module>
+  	<module>factorial</module>
   </modules>
 </project>

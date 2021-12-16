@@ -17,6 +17,7 @@ public class PalindromeWithLibraryTest {
     public void palindromeUsingLibraryTest() {
 
         assertEquals(true, PalindromeWithLibrary.isPalindrome("otto"));
+        assertEquals(false, PalindromeWithLibrary.isPalindrome("rajan"));
 
     }
 }	

@@ -10,16 +10,14 @@ import java.util.Scanner;
  *
  */
 public class ReverseString {
-	public static String reverse(String input) {
-		// converting string into char array
-				char[] ch = input.toCharArray();
+	public static String reverse(String s) {
 
 				// declare empty string
 				String rev = "";
 
 				// for loop from last element to first element
-				for (int i = ch.length - 1; i >= 0; i--) {
-					rev = rev + ch[i];
+				for (int i = s.length() - 1; i >= 0; i--) {
+					rev = rev + s.charAt(i);
 				}
 
 				return rev;
