@@ -6,15 +6,12 @@ public class Palindrome {
 
     public static String isPalindrome(String s) {
 
-        // converting string into char array
-        char[] str = s.toCharArray();
-
         // declaring an empty string
         String rev = "";
 
         // loop from last to first element
-        for (int i = str.length - 1; i >= 0; i--) {
-            rev = rev + str[i];
+        for (int i = s.length() - 1; i >= 0; i--) {
+            rev = rev + s.charAt(i);
         }
         // comparing the rev and user input
         if (s.equals(rev)) {
@@ -32,6 +29,7 @@ public class Palindrome {
         String input = sc.nextLine();
 
         isPalindrome(input);
+
 
     }
 
