@@ -22,6 +22,7 @@
     <module>BinarySearch</module>
     <module>SquareRoot</module>
     <module>permutation</module>
+    <module>primenumber</module>
   </modules>
   <dependencies>
 <!-- https://mvnrepository.com/artifact/junit/junit -->
