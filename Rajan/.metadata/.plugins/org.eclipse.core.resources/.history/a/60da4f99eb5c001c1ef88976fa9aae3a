@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package com.espire.palindrome;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * @author rajan.lahoti
+ *
+ */
+public class PalindromeTest {
+
+	@Test
+	public void testisPalindrome() {
+		assertEquals("not palindrome",Palindrome.isPalindrome("Rajan"));
+		assertEquals("palindrome",Palindrome.isPalindrome("Otto"));
+	}
+
+}
