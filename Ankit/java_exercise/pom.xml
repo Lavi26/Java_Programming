@@ -20,6 +20,7 @@
     <module>insertionsort</module>
     <module>sorting</module>
     <module>BinarySearch</module>
+    <module>SquareRoot</module>
   </modules>
   <dependencies>
 <!-- https://mvnrepository.com/artifact/junit/junit -->

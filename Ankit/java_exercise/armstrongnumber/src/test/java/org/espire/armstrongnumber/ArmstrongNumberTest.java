@@ -17,9 +17,13 @@ public class ArmstrongNumberTest {
 	 * Test method for {@link org.espire.armstrongnumber.ArmstrongNumber#isArmstrongNumber(int)}.
 	 */
 	@Test
-	public void testIsArmstrongNumber() {
-		assertEquals("Number is armstrong",ArmstrongNumber.isArmstrongNumber(153));
-		assertEquals("Number is not armstrong",ArmstrongNumber.isArmstrongNumber(152));
+	public void testValidIsArmstrongNumber() {
+		assertEquals(true,ArmstrongNumber.isArmstrongNumber(153));
 	}
-
+	//Invalid test case
+	@Test
+	public void testInvalidIsArmstrongNumber() {
+		assertEquals(false,ArmstrongNumber.isArmstrongNumber(152));
+	}
+	
 }
