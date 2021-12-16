@@ -88,8 +88,8 @@ public class DoublyListToBinaryTree {
 	}
 
 	public static void main(String args[]) {
-		DoublyListNode node1= new DoublyListNode();
-		node1.add(1);
+		DoublyListNode node1= new DoublyListNode(1);
+		
 		DoublyListNode node2= new DoublyListNode(2);
 		DoublyListNode node3= new DoublyListNode(3);
 		DoublyListNode node4= new DoublyListNode(4);
