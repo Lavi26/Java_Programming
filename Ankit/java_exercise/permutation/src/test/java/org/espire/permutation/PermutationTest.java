@@ -18,7 +18,11 @@ public class PermutationTest {
 	 */
 	@Test
 	public void testFindPermutation1() {
-		
+		Permutation.findPermutation("ABCD", 0, 3);
 	}
 
+	@Test
+	public void testFindPermutation2() {
+		Permutation.findPermutation("ABC", 0, 2);
+	}
 }
