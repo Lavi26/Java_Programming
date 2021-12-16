@@ -21,6 +21,7 @@
     <module>sorting</module>
     <module>BinarySearch</module>
     <module>SquareRoot</module>
+    <module>permutation</module>
   </modules>
   <dependencies>
 <!-- https://mvnrepository.com/artifact/junit/junit -->
