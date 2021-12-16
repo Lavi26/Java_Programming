@@ -7,9 +7,13 @@ import static org.junit.Assert.assertEquals;
 public class ArmstrongTest {
 
     @Test
-    public void test() {
+    public void test1() {
         assertEquals(Armstrong.calculate(407), Boolean.TRUE);
         assertEquals(Armstrong.calculate(153), Boolean.TRUE);
-        assertEquals(Armstrong.calculate(154), Boolean.FALSE);
+    }
+    
+    @Test
+    public void test2() {
+      assertEquals(Armstrong.calculate(154), Boolean.FALSE);
     }
 }
