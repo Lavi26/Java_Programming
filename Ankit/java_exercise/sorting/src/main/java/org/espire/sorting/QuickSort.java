@@ -2,20 +2,33 @@ package org.espire.sorting;
 
 public class QuickSort {
 
-	public static void quick(Integer array[], Integer p, Integer size) {
-		Integer q;
-		if (p < size) {
-			q = partition(array, p, size);
-			quick(array, p, q - 1);
-			quick(array, q + 1, size);
+	/**
+	 * method to sort the array
+	 * 
+	 * @param array
+	 * @param pivot
+	 * @param size
+	 */
+	public static void quick(Integer array[], Integer pivot, Integer size) {
+		Integer partitioningIndex;
+		// Checking if pivot value is 0 and size value is last index of the the array
+		if (pivot < size) {
+			/**
+			 * q indicate that the value which is left side of q is sorted and the value
+			 * which is right side of the array is unsorted
+			 */
+			partitioningIndex = partition(array, pivot, size);
+			quick(array, pivot, partitioningIndex - 1);
+			quick(array, partitioningIndex + 1, size);
 		}
 	}
 
-	public static int partition(Integer array[], Integer p, Integer size) {
+	// It divides the array in two parts unsorted and sorted
+	public static int partition(Integer array[], Integer pivot, Integer size) {
 		Integer x, i, j, temp;
 		x = array[size];
-		i = p - 1;
-		for (j = p; j <= size - 1; j++) {
+		i = pivot - 1;
+		for (j = pivot; j <= size-1; j++) {
 			if (array[j] <= x) {
 				i = i + 1;
 				temp = array[j];
@@ -29,12 +42,16 @@ public class QuickSort {
 		return i + 1;
 	}
 
+	/**
+	 * Main method 
+	 * @param args
+	 */
 	public static void main(String args[]) {
-		Integer array[] = { 10,9, 20, 50, 30};
-		Integer p, i;
+		Integer array[] = { 10, 9, 20, 50, 30 };
+		Integer pivot, i;
 
-		p = 1;
-		quick(array, p, array.length-1);
+		pivot = 0;
+		quick(array, pivot, array.length - 1);
 		for (i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
 		}

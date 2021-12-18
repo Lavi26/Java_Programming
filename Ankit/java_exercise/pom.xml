@@ -23,6 +23,7 @@
     <module>SquareRoot</module>
     <module>permutation</module>
     <module>primenumber</module>
+    <module>linkedlist</module>
   </modules>
   <dependencies>
 <!-- https://mvnrepository.com/artifact/junit/junit -->
