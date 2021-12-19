@@ -4,7 +4,7 @@ public class DoublyLinkedToBinaryTree {
 
 	public static BinaryTreeNode sortedListToBinarySearchTree(DoublyLinkedListNode head) {
 		// finding the size of the list
-		int len = 0;
+		Integer len = 0;
 		DoublyLinkedListNode currentNode = head;
 		while (currentNode != null) {
 			len++;
@@ -13,13 +13,13 @@ public class DoublyLinkedToBinaryTree {
 		return construct(head, 0, len - 1);
 	}
 
-	public static BinaryTreeNode construct(DoublyLinkedListNode head, int start, int end) {
+	public static BinaryTreeNode construct(DoublyLinkedListNode head, Integer start, Integer end) {
 		// terminal condition
 		if (start > end) {
 			return null;
 		}
 		// find middle index
-		int mid = start + (end - start) / 2;
+		Integer mid = start + (end - start) / 2;
 		// we will now build the left subtree since it is a bottom up approach
 		BinaryTreeNode left = construct(head, start, mid - 1);
 		BinaryTreeNode root = new BinaryTreeNode(head.value);
@@ -64,11 +64,11 @@ public class DoublyLinkedToBinaryTree {
 }
 
 class BinaryTreeNode {
-	int value;
+	Integer value;
 	BinaryTreeNode left;
 	BinaryTreeNode right;
 
-	public BinaryTreeNode(int value) {
+	public BinaryTreeNode(Integer value) {
 		super();
 		this.value = value;
 	}
@@ -82,11 +82,11 @@ class BinaryTreeNode {
 }
 
 class DoublyLinkedListNode {
-	int value;
+	Integer value;
 	DoublyLinkedListNode previous;
 	DoublyLinkedListNode next;
 
-	public DoublyLinkedListNode(int value) {
+	public DoublyLinkedListNode(Integer value) {
 		super();
 		this.value = value;
 	}
