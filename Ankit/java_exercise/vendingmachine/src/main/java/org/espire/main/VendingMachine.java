@@ -11,27 +11,53 @@ import ore.espire.entity.Product;
 public class VendingMachine {
 
 	public static void vendingMachine() {
+
+		/**
+		 * Creating the object of Bucket and Inventory class
+		 */
 		Bucket bucket = new Bucket();
 		Inventory inventory = new Inventory();
+
+		/**
+		 * Adding some items to inventory
+		 */
 		inventory.addItemToInventory(1, new Product("COCK", 50, 20));
 		inventory.addItemToInventory(2, new Product("PEPSI", 90, 20));
 		inventory.addItemToInventory(3, new Product("CHIPS", 20, 20));
 		inventory.addItemToInventory(4, new Product("5STAR", 10, 20));
 
-		// Declaring variable
+		/**
+		 * Declaring variavbles
+		 */
 		String selectedItem = "";
 		Integer selectedItemPrice = 0;
-		Integer quantity = 0, count = 0, caculate = 0, total = 0, discountCount = 0, discountedTotal = 0;
+		Integer quantity = 0, count = 0, caculate = 0, total = 0, discountCount = 0;
 		Float returnedAmount = 0.0f, insertedCoin = 0.0f;
 
+		/**
+		 * Option displaying on console
+		 */
 		System.out.println("1.Inventory item list.\n2.Purchase\n3.Exit");
 		System.out.print("Enter your choice:");
-		Scanner sc = new Scanner(System.in);
-		Integer choice = sc.nextInt();
-		Integer i;
 
+		/**
+		 * Creating objcet of scanner class
+		 */
+		Scanner sc = new Scanner(System.in);
+		/**
+		 * Customer can enter here there choice according to the options displaying on
+		 * console
+		 */
+		Integer choice = sc.nextInt();
+
+		/**
+		 * while loop for displaying the option's on the screen again and again
+		 */
 		while (choice <= 3 && choice > 0) {
 			switch (choice) {
+			/**
+			 * Case 1 is for displaying the item present in the inventory
+			 */
 			case 1:
 				Iterator<Integer> itemIterator = inventory.getInventory().keySet().iterator();
 				System.out.println("Serial Number \t Product Name \t Product Price \t Quantity");
@@ -42,8 +68,11 @@ public class VendingMachine {
 							+ value.getQuantity());
 				}
 				break;
+			/**
+			 * case 2 is for purchasing the item. it uses the Bucket class for storing the
+			 * record of sold item
+			 */
 			case 2:
-
 				System.out.print("Enter the item name : ");
 				selectedItem = sc.next();
 				Iterator<Integer> itemIterator1 = inventory.getInventory().keySet().iterator();
@@ -65,10 +94,17 @@ public class VendingMachine {
 //			count=count+1;
 //			bucket.addItemToBucket(count, new Product(selectedItem.toUpperCase(), selectedItemPrice, quantity));
 				break;
+			/**
+			 * case 3 is used to display the bucket list and the total amount
+			 */
 			case 3:
 				if (bucket.length() > 0) {
 					Iterator<Integer> itemBucket = bucket.getBucket().keySet().iterator();
 					System.out.println("Serial Number \t Product Name \t Product Price \t Quantity \t Sum");
+
+					/**
+					 * This loop print list of item present in the bucket for cureent session
+					 */
 					while (itemBucket.hasNext()) {
 						Integer key = itemBucket.next();
 						Product value = bucket.getBucket().get(key);
@@ -81,6 +117,10 @@ public class VendingMachine {
 							discountCount++;
 						}
 					}
+					/**
+					 * It checks the chips and pepsi quantity is 5 or not If quantity is 5 the 20%
+					 * discount will be calculated
+					 */
 					if (discountCount == 2) {
 						System.out.println("Congrutulations you will get 20 % discount.");
 						System.out.print("Total amount : " + (total - ((float) total * 0.2)));
