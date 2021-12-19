@@ -26,6 +26,7 @@
     <module>linkedlist</module>
     <module>lrucache</module>
     <module>printleafnode</module>
+    <module>vendingmachine</module>
   </modules>
   <dependencies>
 <!-- https://mvnrepository.com/artifact/junit/junit -->
