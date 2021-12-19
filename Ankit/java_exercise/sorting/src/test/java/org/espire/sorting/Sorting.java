@@ -76,6 +76,19 @@ public class Sorting {
 		MergeSort.mergerSort(array1, new Integer[array1.length], 0, array1.length - 1);
 		assertArrayEquals(sortedArray1, array1);
 	}
+	
+	//Test case for iterative quick sort
+	@Test
+	public void testIterativeQuickSort1() {
+		IterativeQuickSort.quickSortIterative(array, 0, array.length - 1);
+		assertArrayEquals(sortedArray, array);
+	}
+
+	@Test
+	public void testIterativeQuickSort2() {
+		IterativeQuickSort.quickSortIterative(array1,0, array1.length - 1);
+		assertArrayEquals(sortedArray1, array1);
+	}
 
 
 }
