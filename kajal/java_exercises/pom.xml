@@ -1,24 +1,52 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.espire</groupId>
-  <artifactId>java_exercises</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <properties>
-<maven.compiler.source>11</maven.compiler.source>
-<maven.compiler.target>11</maven.compiler.target>
-</properties>
-  <modules>
-  	<module>fibonacciseries</module>
-  	<module>primenumber</module>
-  	<module>palindrome</module>
-  	<module>armstrongnumber</module>
-  	<module>avoidingdeadlock</module>
-  	<module>factorial</module>
-  	<module>reverse_string</module>
-  	<module>remove_duplicates_from_an_array</module>
-  	<module>square_root</module>
-  	<module>binary_search</module>
-  	<module>vending_machine</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.espire</groupId>
+	<artifactId>java_exercises</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+	<modules>
+		<module>fibonacciseries</module>
+		<module>primenumber</module>
+		<module>palindrome</module>
+		<module>armstrongnumber</module>
+
+		<module>factorial</module>
+		<module>reverse_string</module>
+		<module>remove_duplicates_from_an_array</module>
+		<module>square_root</module>
+		<module>binary_search</module>
+
+		<module>all_leaf_of_binary_tree</module>
+		<module>reverse_linked_list</module>
+		<module>quicksort</module>
+		<module>insertion_sort</module>
+
+		<module>string_permutations</module>
+		<module>linked_list_length</module>
+		<module>iterative_quick_sort</module>
+
+		<module>mergesort</module>
+
+		<module>lru_cache</module>
+		<module>deadlock</module>
+		<module>bubblesort</module>
+		<module>bucket_sort</module>
+
+		<module>vendingmachine</module>
+	</modules>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>

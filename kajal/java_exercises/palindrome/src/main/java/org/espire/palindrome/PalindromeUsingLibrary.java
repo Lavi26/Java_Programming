@@ -3,6 +3,8 @@ package org.espire.palindrome;
  * Palindrome Program in Java using Library methods (strings)
  */
 public class PalindromeUsingLibrary {
+
+
 	public static boolean isPalindrome(String str){  
 		// create a StringBuilder object
 	    StringBuilder sb=new StringBuilder(str);  
@@ -10,6 +12,7 @@ public class PalindromeUsingLibrary {
 	    sb.reverse();  
 	    String rev=sb.toString();  
 		 //check if str is palindrome
+
 	    if(str.equals(rev)){  
 	        return true;  
 	    }
