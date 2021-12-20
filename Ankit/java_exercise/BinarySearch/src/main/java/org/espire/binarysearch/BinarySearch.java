@@ -9,8 +9,8 @@ package org.espire.binarysearch;
  */
 public class BinarySearch {
 
-	public static int binarySearch(int array[],int beg,int end,int searchValue) {
-		int mid;
+	public static Integer binarySearch(Integer array[],Integer beg,Integer end,Integer searchValue) {
+		Integer mid;
 		if(end>=beg) {
 			mid=(beg+end)/2;
 			if(array[mid]==searchValue) {
@@ -36,10 +36,10 @@ public class BinarySearch {
 	 */
 	public static void main(String[] args) {
 	
-		int array[]= {10,20,30,50,66,88,95};
+		Integer array[]= {10,20,30,50,66,88,95};
 		
 		//Calling method
-		int output=binarySearch(array, 0, array.length-1, 50);
+		Integer output=binarySearch(array, 0, array.length-1, 50);
 		if(output==-1) {
 			System.out.println("Searched value is not present");
 		}
