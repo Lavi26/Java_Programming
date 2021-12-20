@@ -24,5 +24,8 @@
   	<module>squareroot</module>
   	<module>armstrong</module>
   	<module>factorial</module>
+  	<module>avoid_deadlock</module>
+  	<module>remove_duplicates</module>
+  	<module>fibonacci_series</module>
   </modules>
 </project>
