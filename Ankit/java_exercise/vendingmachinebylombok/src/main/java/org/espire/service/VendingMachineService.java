@@ -55,6 +55,9 @@ public class VendingMachineService {
 		while (choice <= 4 && choice > 0) {
 			switch (choice) {
 
+			/**
+			 * Case 1 is for add product details to inventory
+			 */
 			case 1:
 				inventoryObj.inventoryChanges();
 				break;
@@ -70,22 +73,7 @@ public class VendingMachineService {
 			 * record of sold item
 			 */
 			case 3:
-				System.out.print("Enter the item name : ");
-				selectedItem = sc.next();
-				Iterator<Integer> itemIterator1 = inventoryObj.getInventory().keySet().iterator();
-				while (itemIterator1.hasNext()) {
-					Integer key = itemIterator1.next();
-					Product value = inventoryObj.getInventory().get(key);
-					if (selectedItem.toUpperCase().equals(value.getItemName())) {
-						selectedItemPrice = (int) value.getItemPrice();
-						System.out.print("Enter the quantity : ");
-						quantity = sc.nextInt();
-						count = count + 1;
-						bucket.addItemToBucket(count, new Product(selectedItem.toUpperCase(), selectedItemPrice, quantity));
-						System.out.println("Entered item price is : " + selectedItemPrice);
-					}
-				}
-				//bucketService.addProductToBucketFromInventory();
+				inventoryObj.purchaseProduct();
 				break;
 				
 			/**

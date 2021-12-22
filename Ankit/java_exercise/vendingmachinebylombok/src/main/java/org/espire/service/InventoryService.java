@@ -12,6 +12,7 @@ import ore.espire.entity.Product;
 public class InventoryService extends Inventory {
 
 	Product product = new Product();
+	Bucket bucket = new Bucket();
 
 	/**
 	 * method is for displaying the item present in the inventory
@@ -88,15 +89,7 @@ public class InventoryService extends Inventory {
 			case 2:
 				System.out.print("Enter the productId on which you want to update the details : ");
 				productId = scanner.nextInt();
-				Integer key = 0;
-				Iterator<Integer> itemIterator = getInventory().keySet().iterator();
-				while (itemIterator.hasNext()) {
-					key = itemIterator.next();
-					Product value = getInventory().get(key);
-					if (productId == key) {
-						updateInventory(productId, value);
-					}
-				}
+				updateInventory(productId);
 
 				break;
 
@@ -129,7 +122,11 @@ public class InventoryService extends Inventory {
 	 * Method to update the inventory this method called inside the
 	 * inventoryChanges() method
 	 */
-	public void updateInventory(Integer productId, Product product) {
+	public void updateInventory(Integer productId) {
+		/**
+		 * security password
+		 */
+
 		/**
 		 * while loop for displaying the option's on the screen again and again
 		 */
@@ -139,37 +136,47 @@ public class InventoryService extends Inventory {
 		System.out.print("Enter your choice : ");
 		choice = scanner.nextInt();
 		while (choice < 4 && choice > 0) {
+			Integer key = 0;
+			Product productValue = null;
+			Iterator<Integer> itemIterator = getInventory().keySet().iterator();
+			while (itemIterator.hasNext()) {
+				key = itemIterator.next();
+				// Product value = getInventory().get(key);
+				if (productId == key) {
+					productValue = getInventory().get(key);
+				}
+			}
 			switch (choice) {
 			/**
-			 * case 1 is for update the present product name 
+			 * case 1 is for update the present product name of corresponding productId
 			 */
 			case 1:
 				System.out.println("Enter new product name : ");
 				String productName = scanner.next();
 
-				updateItemToInventory(productId,
-						new Product(productName, product.getItemPrice(), product.getQuantity()));
+				updateItemToInventory(productId, new Product(productName.toUpperCase(), productValue.getItemPrice(),
+						productValue.getQuantity()));
 				break;
 			/**
-			 * case 2 is for update the present product price
+			 * case 2 is for update the present product price of corresponding productId
 			 */
 			case 2:
 				System.out.println("Enter new product price : ");
 				Integer productPrice = scanner.nextInt();
 
 				updateItemToInventory(productId,
-						new Product(product.getItemName(), productPrice, product.getQuantity()));
+						new Product(productValue.getItemName(), productPrice, productValue.getQuantity()));
 				break;
 
 			/**
-			 * case 3 is for update the present product quantaity
+			 * case 3 is for update the present product quantaity of corresponding productId
 			 */
 			case 3:
 				System.out.println("Enter new product quantity : ");
 				Integer productQuantity = scanner.nextInt();
 
 				updateItemToInventory(productId,
-						new Product(product.getItemName(), product.getItemPrice(), productQuantity));
+						new Product(productValue.getItemName(), productValue.getItemPrice(), productQuantity));
 				break;
 
 			/**
@@ -184,6 +191,37 @@ public class InventoryService extends Inventory {
 			System.out.println("1.Change product name\n2.Change product price.\n3.Changes product quantity\n4.Exit");
 			System.out.print("Enter your choice : ");
 			choice = scanner.nextInt();
+		}
+	}
+
+	/**
+	 * Method for purchase the product
+	 */
+	public void purchaseProduct() {
+		String selectedItem = "";
+		Integer quantity = 0, selectedItemPrice = 0, count = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the item name : ");
+		selectedItem = sc.next();
+		Iterator<Integer> itemIterator1 = getInventory().keySet().iterator();
+		while (itemIterator1.hasNext()) {
+			Integer key = itemIterator1.next();
+			Product value = getInventory().get(key);
+			if (selectedItem.toUpperCase().equals(value.getItemName())) {
+				selectedItemPrice = (int) value.getItemPrice();
+				System.out.println("Remember quantity must be less then 5 \nProduct present in inventory is : "
+						+ value.getQuantity());
+				System.out.print("Enter the quantity : ");
+				quantity = sc.nextInt();
+				while (value.getQuantity() < quantity || quantity > 5) {
+					System.out.println(
+							"Remember quantity must be less then 5 or eaqual to 5. You have entered the wrong quantity please enter the quantity again : ");
+					quantity = sc.nextInt();
+				}
+				count = count + 1;
+				bucket.addItemToBucket(count, new Product(selectedItem.toUpperCase(), selectedItemPrice, quantity));
+				System.out.println("Entered item price is : " + selectedItemPrice);
+			}
 		}
 	}
 //	/**
