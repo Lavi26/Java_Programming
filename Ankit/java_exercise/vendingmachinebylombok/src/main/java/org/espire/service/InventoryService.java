@@ -47,12 +47,16 @@ public class InventoryService extends Inventory {
 		System.out.print("Enter the product name : ");
 		product.setItemName(sc.next());
 		System.out.print("Enter the item price : ");
-		product.setItemPrice(sc.nextLong());
+		product.setItemPrice(sc.nextInt());
 		System.out.print("Enter the quantity :");
-		product.setQuantity(sc.nextLong());
-		addItemToInventory(length() + 1,
-				new Product(product.getItemName(), product.getItemPrice(), product.getQuantity()));
-
+		product.setQuantity(sc.nextInt());
+		Integer key = 0;
+		Iterator<Integer> itemIterator = getInventory().keySet().iterator();
+		while (itemIterator.hasNext()) {
+			key = itemIterator.next();
+			Product value = getInventory().get(key);
+		}
+		addItemToInventory(key + 1, new Product(product.getItemName(), product.getItemPrice(), product.getQuantity()));
 	}
 
 	/**
@@ -77,14 +81,23 @@ public class InventoryService extends Inventory {
 			case 1:
 				addInventoryProductByOption();
 				break;
+
 			/**
 			 * Case 2 is for updating the item present in the inventory
 			 */
 			case 2:
 				System.out.print("Enter the productId on which you want to update the details : ");
 				productId = scanner.nextInt();
+				Integer key = 0;
+				Iterator<Integer> itemIterator = getInventory().keySet().iterator();
+				while (itemIterator.hasNext()) {
+					key = itemIterator.next();
+					Product value = getInventory().get(key);
+					if (productId == key) {
+						updateInventory(productId, value);
+					}
+				}
 
-				updateItemToInventory(productId, product);
 				break;
 
 			/**
@@ -113,48 +126,63 @@ public class InventoryService extends Inventory {
 	}
 
 	/**
-	 * 
+	 * Method to update the inventory this method called inside the
+	 * inventoryChanges() method
 	 */
-	public void updateInventory() {
+	public void updateInventory(Integer productId, Product product) {
 		/**
 		 * while loop for displaying the option's on the screen again and again
 		 */
 		Integer choice;
 		Scanner scanner = new Scanner(System.in);
-		System.out.println(
-				"1.Add product to inventory\n2.Update inventory product details.\n3.Remove product from inventory\n4.Exit");
+		System.out.println("1.Change product name\n2.Change product price.\n3.Changes product quantity\n4.Exit");
 		System.out.print("Enter your choice : ");
 		choice = scanner.nextInt();
-		while (choice <= 4 && choice > 0) {
+		while (choice < 4 && choice > 0) {
 			switch (choice) {
-
+			/**
+			 * case 1 is for update the present product name 
+			 */
 			case 1:
+				System.out.println("Enter new product name : ");
+				String productName = scanner.next();
+
+				updateItemToInventory(productId,
+						new Product(productName, product.getItemPrice(), product.getQuantity()));
 				break;
 			/**
-			 * Case 2 is for displaying the item present in the inventory
+			 * case 2 is for update the present product price
 			 */
 			case 2:
+				System.out.println("Enter new product price : ");
+				Integer productPrice = scanner.nextInt();
+
+				updateItemToInventory(productId,
+						new Product(product.getItemName(), productPrice, product.getQuantity()));
 				break;
 
 			/**
-			 * case 3 is for purchasing the item. it uses the Bucket class for storing the
-			 * record of sold item
+			 * case 3 is for update the present product quantaity
 			 */
 			case 3:
+				System.out.println("Enter new product quantity : ");
+				Integer productQuantity = scanner.nextInt();
+
+				updateItemToInventory(productId,
+						new Product(product.getItemName(), product.getItemPrice(), productQuantity));
 				break;
-				
+
 			/**
-			 * case 4 is used to display the bucket list and the total amount
+			 * case 4 is used to exit from the update inventory option
 			 */
 			case 4:
-
 				break;
 			default:
 				break;
 
 			}
-			System.out.println("1.Inventory\n2.Inventory item list.\n3.Purchase\n4.Exit");
-			System.out.print("Enter your choice:");
+			System.out.println("1.Change product name\n2.Change product price.\n3.Changes product quantity\n4.Exit");
+			System.out.print("Enter your choice : ");
 			choice = scanner.nextInt();
 		}
 	}

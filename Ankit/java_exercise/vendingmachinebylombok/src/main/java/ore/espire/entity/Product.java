@@ -20,10 +20,10 @@ public class Product {
 	
 	@Getter 
 	@Setter
-	private long itemPrice;
+	private Integer itemPrice;
 	
 	@Getter 
 	@Setter
-	private long quantity;
+	private Integer quantity;
 
 }
