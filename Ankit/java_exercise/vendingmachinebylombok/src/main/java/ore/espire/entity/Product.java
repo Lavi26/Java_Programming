@@ -1,8 +1,14 @@
 package ore.espire.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
 	/**
@@ -19,14 +25,5 @@ public class Product {
 	@Getter 
 	@Setter
 	private long quantity;
-
-	//Parimeterized constructor
-	public Product(String itemName, long itemPrice, long quantity) {
-		super();
-		this.itemName = itemName;
-		this.itemPrice = itemPrice;
-		this.quantity = quantity;
-
-	}
 
 }
