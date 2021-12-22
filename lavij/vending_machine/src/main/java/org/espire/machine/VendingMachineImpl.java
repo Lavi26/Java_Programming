@@ -1,45 +1,17 @@
 package org.espire.machine;
 
 
-import java.util.Arrays;
-import java.util.Optional;
+import java.util.List;
 import org.espire.machine.bucket.Bucket;
 import org.espire.machine.bucket.Coin;
-import org.espire.machine.product.Inventory;
+import org.espire.machine.product.InventoryMapping;
 import org.espire.machine.product.Product;
 
 
 public class VendingMachineImpl implements VendingMachine {
 
-  private Inventory inventory = new Inventory();
-  
-
-  private void initialize() {
-    inventory.putInventory(20, new Product(1, "COKE", (long) 40.0));
-    inventory.putInventory(30, new Product(2, "PEPSI", (long) 30));
-    inventory.putInventory(20, new Product(3, "CHIPS",(long) 10));
-    inventory.putInventory(40, new Product(4, "CHOCO",(long) 20));
-  }
-
-
-
-  @Override
-  public int selectItemGetPrice(Product product) {
-   
-    return 0;
-  }
-  
-  public void displayInsertedCoinValue(Coin coins) {
-    
-  }
-
-
-
-  @Override
-  public Optional<Bucket> insertCoin(Coin coins) {
-    // TODO Auto-generated method stub
-    return null;
-  }
+  private InventoryMapping inventory = new InventoryMapping();
+ 
 
 
 
@@ -47,6 +19,46 @@ public class VendingMachineImpl implements VendingMachine {
   public Bucket getItemsAndChange(int coinValue) {
     // TODO Auto-generated method stub
     return null;
+  }
+
+
+
+  @Override
+  public long selectProductAndGetPrice(Product product) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+
+
+  @Override
+  public void insertCoin(Coin coin) {
+    // TODO Auto-generated method stub
+    
+  }
+
+
+
+  @Override
+  public List<Coin> refund() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+
+
+  @Override
+  public Bucket collectItemAndChange(int coinValue) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+
+
+  @Override
+  public void reset() {
+    // TODO Auto-generated method stub
+    
   }
 
  
