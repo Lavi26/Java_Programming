@@ -27,6 +27,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -38,13 +39,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.palindrome"/>
+			<item value="org.squareroot"/>
 		</list>
 		<list key="groupId">
 			<item value="org.espire"/>
 		</list>
 		<list key="artifactId">
-			<item value="palindrome"/>
+			<item value="squareroot"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -65,8 +66,12 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="palindrome"/>
+			<item value="squareroot"/>
 			<item value="java_excercises"/>
+			<item value="factorial"/>
+			<item value="armstrong"/>
+			<item value="reverse_string"/>
+			<item value="palindrome"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -86,6 +91,10 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="squareroot"/>
+			<item value="factorial"/>
+			<item value="armstrong"/>
+			<item value="reverse_string"/>
 			<item value="palindrome"/>
 		</list>
 		<list key="projectNameTemplate">

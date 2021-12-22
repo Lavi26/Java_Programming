@@ -1,7 +1,8 @@
 package org.espire.removeduplicates;
 /*
- * Write a program to remove duplicates from an array in Java without using the Java Collection API.
+ // Write a program to remove duplicates from an array in Java without using the Java Collection API.
  */
+
 //Creating RemoveDuplicatesFromArray class
 public class RemoveDuplicatesFromArray {
 //main method

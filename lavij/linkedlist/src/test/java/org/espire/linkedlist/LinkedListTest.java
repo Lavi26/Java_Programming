@@ -8,7 +8,7 @@ import org.junit.Test;
 public class LinkedListTest {
 
 	@Test
-	public void test1() {
+	public void lengthTest() {
 		
 		LengthOfLinkedList.addNode(2);
 		LengthOfLinkedList.addNode(3);
@@ -18,7 +18,7 @@ public class LinkedListTest {
 	
 
 	@Test
-	public void test2() {
+	public void reverseTest() {
 		
 		ReverseLinkedList.head= new Node(10);
 		ReverseLinkedList.head.next= new Node(20);
