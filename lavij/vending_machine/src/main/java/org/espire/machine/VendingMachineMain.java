@@ -35,6 +35,7 @@ public class VendingMachineMain {
 
             System.out.println(value.toString());
 
+           // bucket.add(key,value);
         }
 
 
@@ -122,12 +123,13 @@ public class VendingMachineMain {
         System.out.println("Enter Product quantity: ");
         product.getInventory().setQuantity(sc.nextInt());
 
-        List<Product> list = new ArrayList<>();
-        list.add(new Product(inventoryMap.length()+1,product.getName(),product.getDescription(),
-                product.getPrice().,product.getPrice().getMrp(),
-                product.getInventory().getProductId(),product.getInventory().getQuantity()));
-
-        }
+//        List<Product> list = new ArrayList<>();
+//        Price price = new Price();
+//        Double productPrice = price.getProductPrice();
+//        list.add(new Product(product.getId() + 1, product.getName(), product.getDescription(),
+//                product.getPrice().getProductPrice(), product.getPrice().getMrp(),
+//                product.getInventory().getProductId(), product.getInventory().getQuantity()));
+    }
     private void updateInventory(Integer productId) {
     }
 
@@ -135,16 +137,14 @@ public class VendingMachineMain {
     public static List<Product> initializeProduct() {
         List<Product> list = new ArrayList<>();
 
-        //Product product1 = new Product(1, "Coke", "Coke Bottle", new Price(32.5, 30.0), new Inventory(1, 0));
+        Product product1 = new Product(1, "Coke", "Coke Bottle", new Price(32.5, 30.0), new Inventory(1, 0));
         Product product2 = new Product(2, "Pepsi", "Pepsi Bottle", new Price(35.5, 20.0), new Inventory(2, 10));
         Product product3 = new Product(3, "Lays", "Chips Packet", new Price(11.0, 10.0), new Inventory(3, 20));
-        list.add(new Product(1, "Coke", "Coke Bottle", new Price(32.5, 30.0), new Inventory(1, 0)));
+        list.add(product1);
         list.add(product2);
         list.add(product3);
 
-//        System.out.println(product1.toString());
-//        System.out.println(product2.toString());
-//        System.out.println(product3.toString());
+
         return list;
     }
 
