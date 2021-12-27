@@ -4,24 +4,29 @@ import java.util.HashMap;
 
 public class InventoryMapping {
 
-    HashMap<Integer, Product> inventory = new HashMap<>();
+    HashMap<Integer, Inventory> inventory = new HashMap<>();
 
-    public HashMap<Integer, Product> getInventory() {
+    private static InventoryMapping instance;
 
-        return inventory;
+    private InventoryMapping() {
     }
 
-    public int length() {
-        return inventory.size();
+    public static InventoryMapping getInstance() {
+        if (instance == null) {
+            instance = new InventoryMapping();
+        }
+        return instance;
     }
 
-    public void add(Integer productId, Product product) {
-
-        this.inventory.put(productId, product);
+    public void add(Integer productId, Inventory inventory) {
+        this.inventory.put(productId, inventory);
     }
 
     public void remove(Integer productId) {
-
         this.inventory.remove(productId);
+    }
+
+    public Inventory get(Integer productId) {
+        return this.inventory.get(productId);
     }
 }
