@@ -16,26 +16,6 @@ public class Product {
     private Price price;
     private Inventory inventory;
 
-
-//    Double productPrice = price.getProductPrice();
-//    Double mrp = price.getMrp();
-//
-//    Integer productId = inventory.getProductId();
-//    Integer quantity = inventory.getQuantity();
-//
-//
-//    public Product(Integer id, String name, String description, Double productPrice, Double mrp, Integer productId, Integer quantity) {
-//
-//        this.id = id;
-//        this.name = name;
-//        this.description = description;
-//        this. productPrice = productPrice;
-//        this.mrp = mrp;
-//        this.productId = productId;
-//        this.quantity = quantity;
-//
-//    }
-
     @Override
     public String toString() {
         return "Product{" +

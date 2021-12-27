@@ -10,7 +10,7 @@ public class BucketService extends Bucket {
 
 	Product product = new Product();
 	Scanner scanner = new Scanner(System.in);
-	//Bucket bucket;
+	// Bucket bucket;
 
 	/**
 	 * Declaring variables
@@ -101,7 +101,7 @@ public class BucketService extends Bucket {
 		/**
 		 * while loop for displaying the option's on the screen again and again
 		 */
-		while (choice <=4 && choice > 0) {
+		while (choice <= 4 && choice > 0) {
 			switch (choice) {
 
 			case 1:
@@ -117,7 +117,8 @@ public class BucketService extends Bucket {
 				} else {
 					System.out.println("Your bucket is empty:");
 				}
-				// inventoryService.inventoryList();
+				total = 0;
+				discountCount = 0;
 				break;
 
 			/**
@@ -134,24 +135,7 @@ public class BucketService extends Bucket {
 			 */
 			case 4:
 				if (length() > 0) {
-					Iterator<Integer> itemBucket = getBucket().keySet().iterator();
-					System.out.println("Serial Number \t Product Name \t Product Price \t Quantity \t Sum");
-
-					/**
-					 * This loop print list of item present in the bucket for cureent session
-					 */
-					while (itemBucket.hasNext()) {
-						Integer key = itemBucket.next();
-						Product value = getBucket().get(key);
-						caculate = (int) (value.getItemPrice() * value.getQuantity());
-						total = total + caculate;
-						System.out.println(key + " \t\t " + value.getItemName() + " \t\t " + value.getItemPrice()
-								+ " \t\t " + value.getQuantity() + " \t\t " + caculate);
-						if ((value.getItemName().equals("CHIPS") && value.getQuantity() == 5)
-								|| (value.getItemName().equals("COCK") && value.getQuantity() == 5)) {
-							discountCount++;
-						}
-					}
+					bucketList();
 					/**
 					 * It checks the chips and pepsi quantity is 5 or not If quantity is 5 the 20%
 					 * discount will be calculated
@@ -203,6 +187,5 @@ public class BucketService extends Bucket {
 			choice = scanner.nextInt();
 		}
 	}
-	
 
 }

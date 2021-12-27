@@ -12,5 +12,4 @@ public class Price {
   private Double mrp;
   private Double productPrice;
 
-
 }
