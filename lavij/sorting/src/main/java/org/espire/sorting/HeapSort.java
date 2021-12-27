@@ -1,11 +1,10 @@
 package org.espire.sorting;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /*
  * Sorting an array using heap sort algorithm
- * 
+ *
  * */
 public class HeapSort {
 
@@ -51,6 +50,7 @@ public class HeapSort {
 		// build heap...rearrange array
 		// In complete binary tree ,first index of leaf node is given n/2-1
 		int n=a.length;
+
 		for (int i = n / 2 - 1; i >= 0; i--) {
 
 			heapify(a, n, i);
@@ -71,7 +71,7 @@ public class HeapSort {
 	public static void main(String args[]) {
 
 		int array[] = { 6, 8, 4, 3, 5, 7 };
-		
+
 		HeapSort.heapSort(array);
 		System.out.println(Arrays.toString(array));
 		}

@@ -2,33 +2,26 @@ package org.espire.machine.product;
 
 import java.util.HashMap;
 
-
 public class InventoryMapping {
 
-  protected HashMap<Integer, Inventory> inventory = new HashMap<>();
+    HashMap<Integer, Product> inventory = new HashMap<>();
 
-  public Integer length() {
-    return inventory.size();
-  }
+    public HashMap<Integer, Product> getInventory() {
 
-  public HashMap<Integer,Inventory> getInventory() {
-    return inventory;
-  }
-
-  public void add(Integer productId, Inventory product) {
-    this.inventory.put(productId, product);
-  }
-
-  public void remove(Integer productId) {
-    this.inventory.remove(productId);
-
-  }
-
-  public void get(Integer productId) {
-    if (!inventory.containsKey(productId)) {
-      return;
+        return inventory;
     }
-    this.inventory.get(productId);
 
-  }
+    public int length() {
+        return inventory.size();
+    }
+
+    public void add(Integer productId, Product product) {
+
+        this.inventory.put(productId, product);
+    }
+
+    public void remove(Integer productId) {
+
+        this.inventory.remove(productId);
+    }
 }

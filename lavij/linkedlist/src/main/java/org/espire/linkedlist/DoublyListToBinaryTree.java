@@ -88,17 +88,25 @@ public class DoublyListToBinaryTree {
 	}
 
 	public static void main(String args[]) {
-		DoublyListNode node1= new DoublyListNode(1);
-		
-		DoublyListNode node2= new DoublyListNode(2);
-		DoublyListNode node3= new DoublyListNode(3);
-		DoublyListNode node4= new DoublyListNode(4);
-		DoublyListNode node5= new DoublyListNode(5);
-		System.out.println("node1:" +node1);
-		node5.previous=node4; node4.next=node5;
-		node4.previous=node3; node3.next=node4;
-		node3.previous=node2; node2.next=node3;
-		node2.previous=node1; node1.next=node2;
+		DoublyListNode node1 = new DoublyListNode(1);
+		DoublyListNode node2 = new DoublyListNode(2);
+		DoublyListNode node3 = new DoublyListNode(3);
+		DoublyListNode node4 = new DoublyListNode(4);
+		DoublyListNode node5 = new DoublyListNode(5);
+		DoublyListNode node6 = new DoublyListNode(6);
+		DoublyListNode node7 = new DoublyListNode(7);
+		node7.previous = node6;
+		node6.next = node7;
+		node6.previous = node5;
+		node5.next = node6;
+		node5.previous = node4;
+		node4.next = node5;
+		node4.previous = node3;
+		node3.next = node4;
+		node3.previous = node2;
+		node2.next = node3;
+		node2.previous = node1;
+		node1.next = node2;
 		
 		DoublyListNode.printList(node1);
 		

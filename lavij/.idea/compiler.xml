@@ -2,22 +2,28 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="revstring" />
         <module name="fibonacci" />
         <module name="primenum" />
         <module name="linkedlist" />
-        <module name="binarysearch" />
-        <module name="array" />
+        <module name="cache" />
         <module name="armstrongnumber" />
         <module name="factorial" />
+        <module name="string_permutation" />
+        <module name="java_exercises" />
+        <module name="deadlock" />
+        <module name="binarytree" />
+        <module name="revstring" />
+        <module name="binarysearch" />
+        <module name="array" />
         <module name="sorting" />
         <module name="squareroot" />
-        <module name="java_exercises" />
         <module name="palindromenumber" />
+        <module name="vending_machine" />
       </profile>
     </annotationProcessing>
   </component>

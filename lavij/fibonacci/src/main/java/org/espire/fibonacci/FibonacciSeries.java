@@ -1,7 +1,5 @@
 package org.espire.fibonacci;
 
-import java.util.Scanner;
-
 public class FibonacciSeries {
 
 	/*
@@ -27,7 +25,7 @@ public class FibonacciSeries {
 
 	public static void main(String args[]) {
 
-		FibonacciSeries.checkFibonacci(7);	
+		FibonacciSeries.checkFibonacci(6);
 
 	}
 

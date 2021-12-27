@@ -26,7 +26,7 @@ public class RemoveDuplicacyInArray {
 				k++;
 			}
 		}
-
+        //for last element
 		comp[k] = array[n-1];
 		k++;
 

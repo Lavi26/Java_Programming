@@ -8,22 +8,22 @@
 	<artifactId>java_exercises</artifactId>
 	<version>1.0</version>
 	<modules>
-		<module>armstrong_number</module>
+		<module>armstrongnumber</module>
 		<module>factorial</module>
 		<module>fibonacci</module>
 
 		<module>array</module>
 		<module>squareroot</module>
-		<module>binary_search</module>
+		<module>binarysearch</module>
 
-		<module>palindrome_number</module>
-		<module>prime_number</module>
-		<module>reverse_string</module>
+		<module>palindromenumber</module>
+		<module>primenum</module>
+		<module>revstring</module>
 
 		<module>sorting</module>
 		<module>linkedlist</module>
 		<module>string_permutation</module>
-		<module>binary_tree</module>
+		<module>binarytree</module>
 		<module>cache</module>
 		<module>deadlock</module>
 		<module>vending_machine</module>
