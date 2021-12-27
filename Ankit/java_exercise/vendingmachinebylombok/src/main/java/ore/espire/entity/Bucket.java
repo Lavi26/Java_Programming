@@ -2,7 +2,7 @@ package ore.espire.entity;
 
 import java.util.HashMap;
 
-public class Bucket extends Inventory{
+public class Bucket {
 	HashMap<Integer, Product> bucketList = new HashMap<>();
 
 	public Integer length() {
