@@ -44,5 +44,13 @@ public class LeafNode {
 
   public static void main(String args[]) {
 
+    TreeNode root = newNode(1);
+    root.left = LeafNode.newNode(2);
+    root.right = LeafNode.newNode(3);
+    root.left.left = LeafNode.newNode(4);
+    root.right.left = LeafNode.newNode(5);
+    root.right.right = LeafNode.newNode(6);
+
+    printLeaves(root);
   }
 }

@@ -29,7 +29,7 @@ public class VendingMachineMain {
         item.setQuantity(2);
         Bucket.getInstance().add(ProductManager.getInstance().get(1).getId(), item);
         Double total = Bucket.getInstance().calculate();
-        System.out.println("Total proce {" + total + "}");
+        System.out.println("Total price {" + total + "}");
 
         Bucket.getInstance().checkout();
         System.out.println("Updated inventory {" + InventoryManager.getInstance().toString() + "}");
