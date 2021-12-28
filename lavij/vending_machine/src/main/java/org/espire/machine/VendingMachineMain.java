@@ -1,70 +1,58 @@
 package org.espire.machine;
 
 import org.espire.machine.bucket.Bucket;
-import org.espire.machine.product.Inventory;
-import org.espire.machine.product.InventoryMapping;
+import org.espire.machine.bucket.Item;
+import org.espire.machine.inventory.Inventory;
+import org.espire.machine.inventory.InventoryManager;
 import org.espire.machine.product.Price;
 import org.espire.machine.product.Product;
-
-import java.util.*;
-import java.util.function.Consumer;
+import org.espire.machine.product.ProductManager;
 
 public class VendingMachineMain {
 
     public static void main(String[] args) {
 
-        List<Product> list = initializeProduct();
-        HashMap<Integer, Product> products = new HashMap<>();
+        /**
+         * initialized products
+         */
+        initializeProduct();
+        /**
+         * initialized inventory
+         */
+        initializeInventory();
 
-        list.forEach(new Consumer<Product>() {
-            @Override
-            public void accept(Product product) {
-                products.put(product.getId(), product);
-            }
-        });
+        /**
+         * checkout operation
+         */
+        Item item = new Item();
+        item.setProductId(ProductManager.getInstance().get(1).getId());
+        item.setQuantity(2);
+        Bucket.getInstance().add(ProductManager.getInstance().get(1).getId(), item);
+        Double total = Bucket.getInstance().calculate();
+        System.out.println("Total proce {" + total + "}");
 
-        System.out.println(products.get(1).toString());
-
-        InventoryMapping.getInstance().add(1, new Inventory(1, 10));
-        InventoryMapping.getInstance().add(2, new Inventory(2, 10));
-        InventoryMapping.getInstance().add(3, new Inventory(3, 10));
-
-
-        Bucket bucket = new Bucket();
-        bucket.getObject().add(1, new Product());
-        bucket.getObject().add(2, new Product());
-        bucket.getObject().add(3, new Product());
-
-        System.out.println(bucket.toString());
-
-        bucket.calculate();
-        bucket.checkout();
-
-
+        Bucket.getInstance().checkout();
+        System.out.println("Updated inventory {" + InventoryManager.getInstance().toString() + "}");
     }
 
-
-    public static List<Product> initializeProduct() {
-
-        List<Product> list = new ArrayList<>();
+    public static void initializeProduct() {
         Product product1 = new Product(1, "Coke", "Coke Bottle", new Price(35.5, 20.0));
         Product product2 = new Product(2, "Pepsi", "Pepsi Bottle", new Price(35.5, 20.0));
         Product product3 = new Product(3, "Lays", "Chips Packet", new Price(11.0, 10.0));
-        list.add(product1);
-        list.add(product2);
-        list.add(product3);
-        System.out.println(Arrays.toString(list.toArray()));
-        return list;
 
+        ProductManager.getInstance().add(product1.getId(), product1);
+        ProductManager.getInstance().add(product2.getId(), product2);
+        ProductManager.getInstance().add(product3.getId(), product3);
     }
 
-    public static HashMap<Integer, Inventory> initializeInventory() {
-        HashMap<Integer, Inventory> inventory = new HashMap<>();
-        inventory.put(1, new Inventory(1, 10));
-        inventory.put(2, new Inventory(2, 10));
-        inventory.put(3, new Inventory(3, 10));
-        return inventory;
-    }
+    public static void initializeInventory() {
+        Inventory inventory1 = new Inventory(1, 10);
+        InventoryManager.getInstance().add(inventory1.getProductId(), inventory1);
+        Inventory inventory2 = new Inventory(2, 10);
+        InventoryManager.getInstance().add(inventory2.getProductId(), inventory2);
+        Inventory inventory3 = new Inventory(3, 10);
+        InventoryManager.getInstance().add(inventory3.getProductId(), inventory3);
 
+    }
 }
 
