@@ -12,12 +12,19 @@ public class Bucket {
 
     private HashMap<Integer, Product> bucket = new HashMap<>();
 
+    private static Bucket object;
     public Bucket() {
     }
 
-    public HashMap<Integer, Product> getBucket() {
-        return bucket;
+    public static Bucket getObject() {
+        if(object==null){
+          object= new Bucket();
+        }
+        return object;
     }
+//    public HashMap<Integer, Product> getBucket() {
+//        return bucket;
+//    }
 
     public void add(Integer productId, Product product) {
         this.bucket.put(productId, product);
@@ -25,10 +32,6 @@ public class Bucket {
 
     public void remove(Integer productId, Product product) {
         this.bucket.remove(productId, product);
-    }
-
-    public void removeAll(Integer productId, Product product) {
-        this.bucket.clear();
     }
 
     public Double calculate() {
