@@ -7,8 +7,8 @@ public class PalindromeTest {
 	 @Test
 	    public void palindromeUsingLibraryTest() {
 
-	        assertEquals(true, PalindromeUsingLibrary.isPalindrome("mom"));
-	        assertEquals(true, PalindromeUsingLibrary.isPalindrome("madam"));
+	        assertEquals(true, PalindromeUsingLibrary.isPalindrome("bob"));
+	        assertEquals(true, PalindromeUsingLibrary.isPalindrome("maam"));
 
 	    }
 
@@ -19,3 +19,29 @@ public class PalindromeTest {
 	    }
     
 }
+
+/*
+@Test
+public void emptyStringTest() throws Exception {
+
+    input = "";
+
+    assertTrue(pali.isPalindrome1(input));
+
+}
+@Test
+public void validPalindromeTest() throws Exception {
+
+    input = "No lemon no melon";
+
+    assertTrue(pali.isPalindrome1(input));
+}
+
+@Test
+public void invalidPalindromeTest() throws Exception {
+
+    input = "hello bob";
+
+    assertFalse(pali.isPalindrome1(input));
+}
+*/
