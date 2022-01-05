@@ -22,8 +22,11 @@
 
 		<module>sorting</module>
 		<module>linkedlist</module>
-		<module>StringPermutation</module>
+		<module>string_permutation</module>
 		<module>binarytree</module>
+		<module>cache</module>
+		<module>deadlock</module>
+		<module>vending_machine</module>
 	</modules>
 	<packaging>pom</packaging>
 

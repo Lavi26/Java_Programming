@@ -8,7 +8,7 @@ public class BinarySearch {
 	 * Searching position of a value
 	 */
 
-	public static int binarySearch(int a[], int first, int last, int key) {
+	public static int binarySearch(int[] a, int first, int last, int key) {
 
 		// checking if first element of array is lessor than last element
 		if (first <= last) {
@@ -32,6 +32,7 @@ public class BinarySearch {
 				return binarySearch(a, mid + 1, last, key);
 			}
 		}
+		//if key not present
 		return -1;
 
 	}

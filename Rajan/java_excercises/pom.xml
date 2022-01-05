@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.espire</groupId>
+  <artifactId>java_excercises</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>java_excercises</name>
+  <dependencies>
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.13.2</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
+  <properties>
+<maven.compiler.source>11</maven.compiler.source>
+<maven.compiler.targer>11</maven.compiler.targer>
+</properties>
+  <modules>
+  	<module>palindrome</module>
+  	<module>reverse_string</module>
+  	<module>squareroot</module>
+  	<module>armstrong</module>
+  	<module>factorial</module>
+  	<module>avoid_deadlock</module>
+  	<module>remove_duplicates</module>
+  	<module>fibonacci_series</module>
+  	<module>binary_search</module>
+  	<module>remove_duplicates_from_array</module>
+  	<module>insertionsort</module>
+  	<module>bubblesort</module>
+  	<module>quicksort</module>
+  	<module>mergesort</module>
+  	<module>reverse_linked_list</module>
+  	<module>length_of_singly_linked_list</module>
+  	<module>binarytree</module>
+  </modules>
+</project>

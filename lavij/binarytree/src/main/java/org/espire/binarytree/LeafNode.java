@@ -3,66 +3,54 @@ package org.espire.binarytree;
 
 public class LeafNode {
 
-	// class for binary tree node
-	private static class TreeNode {
-		int data;
-		TreeNode left;
-		TreeNode right;
+  // class for binary tree node
+  public static class TreeNode {
+    int data;
+    TreeNode left;
+    TreeNode right;
+  }
 
-		// function to create a new node
-		public TreeNode(int data) {
-			data = data;
-			left = null;
-			right = null;
-		}
+  // function to create a new node
+  public static TreeNode newNode(int data) {
+    TreeNode node = new TreeNode();
+    node.data = data;
+    node.left = null;
+    node.right = null;
+    return node;
+  }
 
-		// create a binary tree
-		public static TreeNode constructBST(int[]arr,int start,int end,TreeNode root)
-		{
-		    if(start>end)
-		        return null;
-		    int mid=(start+end)/2;
 
-		    if(root==null)
-		        root=new TreeNode(arr[mid]);
+  // function to print leaf
+  public static TreeNode printLeaves(TreeNode root) {
+    if (root == null) {
+      return null;
+    }
 
-		    root.left=constructBST(arr,start,mid-1, root.left);
-		    root.right=constructBST(arr,mid+1,end, root.right);
+    if (root.left == null && root.right == null) {
+      System.out.println("" + root.data);
+    }
 
-		    return root;
+    // if left child exist
+    if (root.left != null) {
+      printLeaves(root.left);
+    }
 
-		}
+    // if right child exist
+    if (root.right != null) {
+      printLeaves(root.right);
+    }
+    return root;
+  }
 
-		// function to print leaf
-		public static TreeNode printLeaves(TreeNode root) {
-			if (root == null) {
-				return null;
-			}
+  public static void main(String args[]) {
 
-			if (root.left == null && root.right == null) {
-				System.out.println("" + root.data);
-			}
+    TreeNode root = newNode(1);
+    root.left = LeafNode.newNode(2);
+    root.right = LeafNode.newNode(3);
+    root.left.left = LeafNode.newNode(4);
+    root.right.left = LeafNode.newNode(5);
+    root.right.right = LeafNode.newNode(6);
 
-			// if left child exist
-			if (root.left != null) {
-				printLeaves(root.left);
-			}
-
-			// if right child exist
-			if (root.right != null) {
-				printLeaves(root.right);
-			}
-			return root;
-		}
-	}
-	public static void main(String args[]) {
-		
-		TreeNode root= null;
-		int a[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-		System.out.println("leaf nodes are: ");
-		root = TreeNode.constructBST(a, 0, a.length - 1,root);
-		TreeNode.printLeaves(root);
-		
-	}
+    printLeaves(root);
+  }
 }

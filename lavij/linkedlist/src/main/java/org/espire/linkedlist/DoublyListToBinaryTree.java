@@ -4,20 +4,18 @@ package org.espire.linkedlist;
 public class DoublyListToBinaryTree {
     
 	//class for Binary Tree Node
-	private static class BinaryTreeNode {
+	static class BinaryTreeNode {
 		int value;
 		BinaryTreeNode left;
 		BinaryTreeNode right;
 
 		public BinaryTreeNode(int value) {	
-			value = value;
-			right=null;
-			left=null;;
+			this.value=value;
 		}
 
-		public static String printTree(BinaryTreeNode node) {
+		public static String print(BinaryTreeNode node) {
 			if (node != null) {
-				return node.value + "-(" + printTree(node.left) + "," + printTree(node.right) + ")";
+				return node.value + "-(" + print(node.left) + "," + print(node.right) + ")";
 			}
 			return null;
 		}
@@ -25,15 +23,13 @@ public class DoublyListToBinaryTree {
 	}
     
 	//class for doubly linked list node
-	private static class DoublyListNode {
+	static class DoublyListNode {
 		int value;
 		DoublyListNode previous;
 	    DoublyListNode next;
 
 		public DoublyListNode(int value) {
-			value = value;
-			previous=null;
-			next=null;
+			this.value=value;
 		}
 
 		public static void printList(DoublyListNode node) {
@@ -41,6 +37,7 @@ public class DoublyListToBinaryTree {
 				System.out.println("-" + node.value);
 				node = node.next;
 			}
+			System.out.println();
 		}
 	}
     
@@ -88,21 +85,29 @@ public class DoublyListToBinaryTree {
 	}
 
 	public static void main(String args[]) {
-		DoublyListNode node1= new DoublyListNode();
-		node1.add(1);
-		DoublyListNode node2= new DoublyListNode(2);
-		DoublyListNode node3= new DoublyListNode(3);
-		DoublyListNode node4= new DoublyListNode(4);
-		DoublyListNode node5= new DoublyListNode(5);
-		System.out.println("node1:" +node1);
-		node5.previous=node4; node4.next=node5;
-		node4.previous=node3; node3.next=node4;
-		node3.previous=node2; node2.next=node3;
-		node2.previous=node1; node1.next=node2;
+		DoublyListNode node1 = new DoublyListNode(1);
+		DoublyListNode node2 = new DoublyListNode(2);
+		DoublyListNode node3 = new DoublyListNode(3);
+		DoublyListNode node4 = new DoublyListNode(4);
+		DoublyListNode node5 = new DoublyListNode(5);
+		DoublyListNode node6 = new DoublyListNode(6);
+		DoublyListNode node7 = new DoublyListNode(7);
+		node7.previous = node6;
+		node6.next = node7;
+		node6.previous = node5;
+		node5.next = node6;
+		node5.previous = node4;
+		node4.next = node5;
+		node4.previous = node3;
+		node3.next = node4;
+		node3.previous = node2;
+		node2.next = node3;
+		node2.previous = node1;
+		node1.next = node2;
 		
 		DoublyListNode.printList(node1);
 		
-		System.out.println(BinaryTreeNode.printTree(listToBinary(node1)));
+		System.out.println(BinaryTreeNode.print(listToBinary(node1)));
 	}
 
 }
