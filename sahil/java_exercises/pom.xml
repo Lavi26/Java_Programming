@@ -21,5 +21,11 @@
   	<module>binarysearch</module>
   	<module>fibonacci</module>
   	<module>sorting</module>
+  	<module>prime_number</module>
+  	<module>leaf</module>
+  	<module>linkedlist</module>
+  	<module>deaklockavoidance</module>
+  	<module>permutation</module>
+  	<module>lrucache</module>
   </modules>
 </project>
