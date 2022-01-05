@@ -4,7 +4,7 @@ public class PermutationString {
 	/*
 	 * To print all the permutations of a given string
 	 */
-	public static void permute(String str, int start, int last) {
+	public static void permute(String str, Integer start, Integer last) {
 
 		// print permutation
 		if (start == last) {
@@ -25,7 +25,7 @@ public class PermutationString {
 	}
 
 	// function for swapping character at position
-	public static String swap(String a, int i, int j) {
+	public static String swap(String a, Integer i, Integer j) {
 
 		char temp;
 		char charArray[] = a.toCharArray();
@@ -38,9 +38,8 @@ public class PermutationString {
 	}
 
 	public static void main(String args[]) {
-		String str = "abc";
 
-		PermutationString.permute(str, 0, str.length()-1);
+		PermutationString.permute("avc", 0, 2);
 	}
 
 }

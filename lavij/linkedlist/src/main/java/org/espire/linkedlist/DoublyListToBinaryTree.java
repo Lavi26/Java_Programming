@@ -4,20 +4,18 @@ package org.espire.linkedlist;
 public class DoublyListToBinaryTree {
     
 	//class for Binary Tree Node
-	private static class BinaryTreeNode {
+	static class BinaryTreeNode {
 		int value;
 		BinaryTreeNode left;
 		BinaryTreeNode right;
 
 		public BinaryTreeNode(int value) {	
-			value = value;
-			right=null;
-			left=null;;
+			this.value=value;
 		}
 
-		public static String printTree(BinaryTreeNode node) {
+		public static String print(BinaryTreeNode node) {
 			if (node != null) {
-				return node.value + "-(" + printTree(node.left) + "," + printTree(node.right) + ")";
+				return node.value + "-(" + print(node.left) + "," + print(node.right) + ")";
 			}
 			return null;
 		}
@@ -25,15 +23,13 @@ public class DoublyListToBinaryTree {
 	}
     
 	//class for doubly linked list node
-	private static class DoublyListNode {
+	static class DoublyListNode {
 		int value;
 		DoublyListNode previous;
 	    DoublyListNode next;
 
 		public DoublyListNode(int value) {
-			value = value;
-			previous=null;
-			next=null;
+			this.value=value;
 		}
 
 		public static void printList(DoublyListNode node) {
@@ -41,6 +37,7 @@ public class DoublyListToBinaryTree {
 				System.out.println("-" + node.value);
 				node = node.next;
 			}
+			System.out.println();
 		}
 	}
     
@@ -110,7 +107,7 @@ public class DoublyListToBinaryTree {
 		
 		DoublyListNode.printList(node1);
 		
-		System.out.println(BinaryTreeNode.printTree(listToBinary(node1)));
+		System.out.println(BinaryTreeNode.print(listToBinary(node1)));
 	}
 
 }

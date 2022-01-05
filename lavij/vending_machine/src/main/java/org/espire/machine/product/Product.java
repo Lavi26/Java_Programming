@@ -14,7 +14,7 @@ public class Product {
     private String name;
     private String description;
     private Price price;
-    private Inventory inventory;
+
 
     @Override
     public String toString() {
@@ -23,7 +23,6 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", inventory=" + inventory +
                 '}';
     }
 }
