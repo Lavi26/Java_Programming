@@ -2,53 +2,27 @@ package org.espire.machine.product;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
 
-  private Integer id;
-  private String name;
-  private String description;
-  private Price price;
-
-  private Inventory inventory;
-  
-  public Product(final Integer id, String name, String description, Price price) {
-    this.id = id;
-    this.name = name;
-    this.description = description;
-    this.price = price;
-  }
-
-  public Integer getId() {
-    return id;
-  }
+    private Integer id;
+    private String name;
+    private String description;
+    private Price price;
 
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  public Price getPrice() {
-    return price;
-  }
-
-
-  public void setPrice(Price price) {
-    this.price = price;
-  }
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

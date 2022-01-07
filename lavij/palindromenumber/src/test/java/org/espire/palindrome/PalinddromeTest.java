@@ -10,13 +10,19 @@ public class PalinddromeTest {
     public void palindromeUsingLibraryTest() {
 
         assertEquals(true, PalindromeUsingLibrary.isPalindrome("mom"));
+
+    }
+
+    @Test
+    public void palindromeUsingLibraryTest1() {
+
         assertEquals(true, PalindromeUsingLibrary.isPalindrome("madam"));
 
     }
 
     @Test
     public void palindromeTest() {
-       
-        assertEquals("String is not Palindrome",StringPalindrome.isPalindrome("abc"));
+
+        assertEquals("String is not Palindrome", StringPalindrome.isPalindrome("abc"));
     }
 }

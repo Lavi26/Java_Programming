@@ -27,5 +27,14 @@
   	<module>avoid_deadlock</module>
   	<module>remove_duplicates</module>
   	<module>fibonacci_series</module>
+  	<module>binary_search</module>
+  	<module>remove_duplicates_from_array</module>
+  	<module>insertionsort</module>
+  	<module>bubblesort</module>
+  	<module>quicksort</module>
+  	<module>mergesort</module>
+  	<module>reverse_linked_list</module>
+  	<module>length_of_singly_linked_list</module>
+  	<module>binarytree</module>
   </modules>
 </project>

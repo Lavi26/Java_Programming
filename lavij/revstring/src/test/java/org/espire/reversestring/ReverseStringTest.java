@@ -1,10 +1,8 @@
 package org.espire.reversestring;
 
-import static org.junit.Assert.*;
-
-import java.util.Scanner;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ReverseStringTest {
 
@@ -12,6 +10,12 @@ public class ReverseStringTest {
 	public void reverseStringTest() {
 		
 		assertEquals("cba",ReverseString.checkString("abc"));
+
+	}
+
+	@Test
+	public void reverseStringTest1() {
+
 		assertEquals("edcba",ReverseString.checkString("abcde"));
 	}
 	

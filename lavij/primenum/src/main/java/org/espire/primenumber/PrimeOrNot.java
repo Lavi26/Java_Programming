@@ -1,36 +1,33 @@
 package org.espire.primenumber;
 
-import java.util.Scanner;
-
 public class PrimeOrNot {
 
-	/*
-	 * checking whether number is prime or not
-	 */
-	public static boolean checkPrime(int num) {
+    /*
+     * checking whether number is prime or not
+     */
+    public static boolean checkPrime(Integer num) {
 
-		int i, flag = 0;
-		int m = num / 2;
 
-		if (num <= 1) {
-			return false;
-		} 
-		else {
-			for (i = 2; i <= m; i++) {
+        Integer m = num / 2;
 
-				if (num % i == 0) {
-					return false;
-				}
-			}
-			return true;
-		}
-	}
+        if (num <= 1) {
+            return false;
+        } else {
+            for (Integer i = 2; i <= m; i++) {
 
-	public static void main(String args[]) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
 
-		System.out.println(PrimeOrNot.checkPrime(5));
-		
-		
-	}
+    public static void main(String args[]) {
+
+        System.out.println(PrimeOrNot.checkPrime(5));
+
+
+    }
 
 }

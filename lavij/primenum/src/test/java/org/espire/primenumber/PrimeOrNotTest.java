@@ -1,10 +1,8 @@
 package org.espire.primenumber;
 
-import static org.junit.Assert.*;
-
-import java.util.Scanner;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class PrimeOrNotTest {
 
@@ -12,6 +10,12 @@ public class PrimeOrNotTest {
 	public void test() {
 		
 		assertEquals(true,PrimeOrNot.checkPrime(5));
+
+	}
+
+	@Test
+	public void test1() {
+
 		assertEquals(true,PrimeOrNot.checkPrime(3));
 
 	}

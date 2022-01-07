@@ -4,10 +4,10 @@ public class Armstrong {
     /**
      * Checking whether number is armstrong or not
      */
-    public static Boolean calculate(int num) {
+    public static Boolean calculate(Integer num) {
 
         Boolean status = Boolean.FALSE;
-        int remainder, total = 0;
+        Integer remainder, total = 0;
         Integer value = num;
         //sum of the cube of each digit until 0
         while (num != 0) {
