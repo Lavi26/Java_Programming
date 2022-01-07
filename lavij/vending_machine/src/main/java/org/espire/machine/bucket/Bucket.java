@@ -1,38 +1,70 @@
 package org.espire.machine.bucket;
 
 
-import java.util.HashMap;
-import java.util.List;
-import org.espire.machine.product.Product;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.espire.machine.inventory.Inventory;
+import org.espire.machine.inventory.InventoryManager;
+import org.espire.machine.product.Product;
+import org.espire.machine.product.ProductManager;
+
+import java.util.HashMap;
+import java.util.function.BiConsumer;
 
 @Data
-
-
 public class Bucket {
 
-  private HashMap<Integer, Product> bucket = new HashMap<>();
+    private HashMap<Integer, Item> map = new HashMap<>();
+    private Double total = 0.00;
 
-  public Bucket(HashMap<Integer, Product> bucket) {
-    this.bucket = bucket;
-  }
+    private static Bucket instance;
 
-  public HashMap<Integer, Product> getBucket() {
-    return bucket;
-  }
+    private Bucket() {
+    }
 
-  public void add(Integer productId, Product product) {
-    this.bucket.put(productId, product);
-  }
+    public static Bucket getInstance() {
+        if (instance == null) {
+            instance = new Bucket();
+        }
+        return instance;
+    }
 
-  public void remove(Integer productId, Product product) {
-    this.bucket.remove(productId, product);
-  }
+    public void add(Integer productId, Item item) {
+        map.put(productId, item);
+    }
 
-  public Double calculate() {
-    Double total = 0.00;
+    public Boolean remove(Integer productId, Item item) {
+        Boolean status = false;
+        if (!map.isEmpty()) {
+            map.remove(productId);
+            status = true;
+        }
+        return status;
+    }
 
-    return total;
-  }
+    public Double calculate() {
+        map.forEach(new BiConsumer<Integer, Item>() {
+            @Override
+            public void accept(Integer productId, Item item) {
+                Product product = ProductManager.getInstance().get(productId);
+                if (product != null) {
+                    total += item.getQuantity() * product.getPrice().getProductPrice();
+                }
+            }
+        });
+        return total;
+    }
+
+    public void checkout() {
+        map.forEach(new BiConsumer<Integer, Item>() {
+            @Override
+            public void accept(Integer productId, Item item) {
+                Product product = ProductManager.getInstance().get(productId);
+                if (product != null) {
+                    Inventory inventory = InventoryManager.getInstance().get(productId);
+                    inventory.deduct(productId, item.getQuantity());
+                    InventoryManager.getInstance().add(productId, inventory);
+                }
+            }
+        });
+    }
 }

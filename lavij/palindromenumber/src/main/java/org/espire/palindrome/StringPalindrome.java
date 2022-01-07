@@ -9,23 +9,20 @@ public class StringPalindrome {
      */
     public static String isPalindrome(String s) {
 
-        // converting string into char array
-        char[] str = s.toCharArray();
-
         // declare empty string
         String reverseInput = "";
 
         // reading from end to first
-        for (int i = str.length - 1; i >= 0; i--) {
-            reverseInput = reverseInput + str[i];
+        for (int i = s.length() - 1; i >= 0; i--) {
+            reverseInput = reverseInput + s.charAt(i);
         }
         // comparing
-        if (s.equals(reverseInput)) {
+        if (s.equalsIgnoreCase(reverseInput)) {
             return "String is Palindrome";
         } else {
             return "String is not Palindrome";
         }
-        
+
     }
 
     public static void main(String args[]) {
@@ -34,7 +31,7 @@ public class StringPalindrome {
 
         String input = sc.nextLine();
 
-        isPalindrome(input);
+        System.out.println(isPalindrome(input));
 
     }
 

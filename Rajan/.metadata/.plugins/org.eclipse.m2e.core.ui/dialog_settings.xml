@@ -39,13 +39,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.squareroot"/>
+			<item value="org.binarytree"/>
 		</list>
 		<list key="groupId">
 			<item value="org.espire"/>
 		</list>
 		<list key="artifactId">
-			<item value="squareroot"/>
+			<item value="binarytree"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -66,12 +66,10 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="squareroot"/>
+			<item value="binarytree"/>
 			<item value="java_excercises"/>
-			<item value="factorial"/>
-			<item value="armstrong"/>
-			<item value="reverse_string"/>
-			<item value="palindrome"/>
+			<item value="length_of_singly_linked_list"/>
+			<item value="reverse_linked_list"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -91,11 +89,21 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="binarytree"/>
+			<item value="length_of_singly_linked_list"/>
+			<item value="reverse_linked_list"/>
+			<item value="mergesort"/>
+			<item value="quicksort"/>
+			<item value="bubblesort"/>
+			<item value="insertionsort"/>
+			<item value="remove_duplicates_from_array"/>
+			<item value="binary_search"/>
+			<item value="fibonacci_series"/>
+			<item value="remove_duplicates"/>
+			<item value="avoid_deadlock"/>
 			<item value="squareroot"/>
 			<item value="factorial"/>
 			<item value="armstrong"/>
-			<item value="reverse_string"/>
-			<item value="palindrome"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

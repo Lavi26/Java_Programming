@@ -1,13 +1,11 @@
 package org.espire.factorial;
 
-import java.util.Scanner;
-
 public class FactorialUsingMethod {
 
 	/*
 	 * Giving the Factorial of a number using method
 	 */
-	public static int factorial(int number) {
+	public static int factorial(Integer number) {
 
 		if (number == 0) {
 			return 1;
