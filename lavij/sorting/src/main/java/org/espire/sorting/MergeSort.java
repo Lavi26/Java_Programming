@@ -9,9 +9,9 @@ import java.util.Arrays;
 public class MergeSort {
 
 	// Divide the array into two sub arrays, sort them, and merge them
-	public static void mergeSort(int array[], int start, int end) {
+	public static void mergeSort(Integer array[], Integer start, Integer end) {
 
-		int mid;
+		Integer mid;
 
 		if (start < end) {
 
@@ -30,27 +30,27 @@ public class MergeSort {
 	}
 
 	// Merge two sub array into array
-	private static void merge(int array[], int start, int mid, int end) {
+	private static void merge(Integer array[], Integer start, Integer mid, Integer end) {
 
-		int n1 = mid - start + 1;
-		int n2 = end - mid;
+		Integer n1 = mid - start + 1;
+		Integer n2 = end - mid;
 
 		// temporary array
-		int LeftArray[] = new int[n1];
-		int RightArray[] = new int[n2];
+		Integer LeftArray[] = new Integer[n1];
+		Integer RightArray[] = new Integer[n2];
 
 		// store data in temporary array
-		for (int i = 0; i < n1; i++) {
+		for (Integer i = 0; i < n1; i++) {
 			LeftArray[i] = array[start + i];
 		}
-		for (int j = 0; j < n2; j++) {
+		for (Integer j = 0; j < n2; j++) {
 			RightArray[j] = array[mid + 1 + j];
 		}
 
 		// current index of sub array and main array
-		int i = 0;
-		int j = 0;
-		int k = start;
+		Integer i = 0;
+		Integer j = 0;
+		Integer k = start;
 
 		// until reach to the end of left array or right array, pick larger and place it
 		// to the correct position
@@ -83,7 +83,7 @@ public class MergeSort {
 	public static void main(String args[]) {
 
 
-		int array[] = { 6, 8, 4, 3, 5, 7 };
+		Integer array[] = { 6, 8, 4, 3, 5, 7 };
 
 		MergeSort.mergeSort(array, 0, array.length -1);
 		System.out.println(Arrays.toString(array));

@@ -22,7 +22,7 @@ public class StringPalindrome {
         } else {
             return "String is not Palindrome";
         }
-        
+
     }
 
     public static void main(String args[]) {

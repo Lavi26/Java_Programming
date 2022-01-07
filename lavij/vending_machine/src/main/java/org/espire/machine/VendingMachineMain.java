@@ -11,7 +11,11 @@ import org.espire.machine.product.ProductManager;
 public class VendingMachineMain {
 
     public static void main(String[] args) {
+        mainMethod();
 
+    }
+
+    public static void mainMethod(){
         /**
          * initialized products
          */
@@ -27,10 +31,17 @@ public class VendingMachineMain {
         Item item = new Item();
         item.setProductId(ProductManager.getInstance().get(1).getId());
         item.setQuantity(2);
+
+        //add to the bucket
         Bucket.getInstance().add(ProductManager.getInstance().get(1).getId(), item);
+
+        //Bucket.getInstance().remove(ProductManager.getInstance().get(1).getId(), item);
+
+        //calculate total payable amount
         Double total = Bucket.getInstance().calculate();
         System.out.println("Total price {" + total + "}");
 
+        //update inventory and checkout
         Bucket.getInstance().checkout();
         System.out.println("Updated inventory {" + InventoryManager.getInstance().toString() + "}");
     }

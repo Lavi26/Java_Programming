@@ -27,7 +27,12 @@
 		<module>cache</module>
 		<module>deadlock</module>
 		<module>vending_machine</module>
-	</modules>
+        <module>simple_interest</module>
+		<module>compound_interest</module>
+        <module>vowel_consonant</module>
+        <module>sort_string</module>
+        <module>occurrence_character</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<properties>

@@ -43,7 +43,7 @@ public class InventoryManager {
                 s += "Product {" + product.getName() + "} inventory {" + inventory.getQuantity() + "} ";
             }
         });
-        return "InventoryManager{" +
+        return "{" +
                 "" + s +
                 '}';
     }

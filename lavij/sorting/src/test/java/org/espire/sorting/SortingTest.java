@@ -1,91 +1,107 @@
 package org.espire.sorting;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
 
 public class SortingTest {
 
-	@Test
-	public void bubbleSorttest() {
+    @Test
+    public void bubbleSortTest() {
 
-		Integer array[] = {4,6,2,3,1,8};
-		Integer expArray[]= {1,2,3,4,6,8};
-		
-		BubbleSort.bubbleSort(array);
-		System.out.println(Arrays.toString(array));
-		assertArrayEquals(expArray,array);
-		
-	}
-	
-	@Test
-	public void bucketSorttest() {
-		
-		int array[] = {4,6,2,3,1,8};
-		int expArray[]= {1,2,3,4,6,8};
-		
-		BucketSort.bucketSort(array);
-		System.out.println(Arrays.toString(array));
-		assertArrayEquals(expArray,array);
-	}
-	
-	@Test
-	public void HeapSorttest() {
-		
-		int size= 4;
-		int array[]= {2,4,3,5};
-		
-		HeapSort obj = new HeapSort();
-		obj.heapSort(array);
-		
-		int expArray[]= {2,3,4,5};
-		assertArrayEquals(expArray,array);
-		
-	}
-	
-	@Test
-	public void insertionSorttest() {
-		
-		int array[]= {2,4,3,5};
-		
-		InsertionSort obj = new InsertionSort();
-		obj.insertionSort(array);
-		
-		int expArray[]= {2,3,4,5};
-		assertArrayEquals(expArray,array);
-		
-	}
-	
-	@Test
-	public void mergeSorttest() {
-		
-		int size= 4;
-		int array[]= {2,4,3,5};
-		
-		MergeSort obj = new MergeSort();
-		obj.mergeSort(array, 0, size-1);
-		
-		int expArray[]= {2,3,4,5};
-		assertArrayEquals(expArray,array);
-		
-	}
-	
+        Integer array[] = {4, 6, 2, 3, 1, 8};
+        Integer expArray[] = {1, 2, 3, 4, 6, 8};
 
-	@Test
-	public void quickSorttest() {
-		
-		int size= 4;
-		int array[]= {2,4,3,5};
-		
-		QuickSort obj = new QuickSort();
-		obj.quickSort(array, 0, size-1);
-		
-		int expArray[]= {2,3,4,5};
-		assertArrayEquals(expArray,array);
-		
-	}
+        BubbleSort.bubbleSort(array);
+        System.out.println(Arrays.toString(array));
+        assertArrayEquals(expArray, array);
+
+    }
+
+    @Test
+    public void bubbleSortRecursionTest() {
+
+        Integer array[] = {4, 6, 2, 3, 1, 8};
+        Integer expArray[] = {1, 2, 3, 4, 6, 8};
+
+        BubbleSortUsingRecursion.bubbleSort(array, array.length);
+        assertArrayEquals(expArray, array);
+
+    }
+
+    @Test
+    public void bucketSortTest() {
+
+        Integer array[] = {4, 6, 2, 3, 1, 8};
+        Integer expArray[] = {1, 2, 3, 4, 6, 8};
+
+        BucketSort.bucketSort(array);
+        System.out.println(Arrays.toString(array));
+        assertArrayEquals(expArray, array);
+    }
+
+    @Test
+    public void HeapSortTest() {
+
+        int array[] = {2, 4, 3, 5};
+
+        HeapSort.heapSort(array);
+
+        int expArray[] = {2, 3, 4, 5};
+        assertArrayEquals(expArray, array);
+
+    }
+
+    @Test
+    public void insertionSortTest() {
+
+        int array[] = {2, 4, 3, 5};
+        InsertionSort.insertionSort(array);
+
+        int expArray[] = {2, 3, 4, 5};
+        assertArrayEquals(expArray, array);
+
+    }
+
+    @Test
+    public void mergeSortTest() {
+
+        Integer array[] = {2, 4, 3, 5};
+
+        MergeSort.mergeSort(array, 0, array.length - 1);
+
+        Integer expArray[] = {2, 3, 4, 5};
+        assertArrayEquals(expArray, array);
+
+    }
+
+
+    @Test
+    public void quickSortTest() {
+
+        int size = 4;
+        int array[] = {2, 4, 3, 5};
+
+        QuickSort.quickSort(array, 0, size - 1);
+
+        int expArray[] = {2, 3, 4, 5};
+        assertArrayEquals(expArray, array);
+
+    }
+
+    @Test
+    public void iterativeQuickSortTest() {
+
+        Integer array[] = {2, 4, 3, 5};
+
+        IterativeQuickSort.quickSortIterative(array, 0, array.length - 1);
+
+        Integer expArray[] = {2, 3, 4, 5};
+        assertArrayEquals(expArray, array);
+
+    }
 
 
 }
