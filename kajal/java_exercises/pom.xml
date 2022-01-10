@@ -37,8 +37,12 @@
 		<module>deadlock</module>
 		<module>bubblesort</module>
 		<module>bucket_sort</module>
+<<<<<<< HEAD
+		<module>vending_machine</module>
+=======
 
 		<module>vendingmachine</module>
+>>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c
 	</modules>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->

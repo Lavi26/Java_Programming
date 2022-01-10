@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+<<<<<<< HEAD:kajal/java_exercises/bubblesort/.project
 	<name>bubblesort</name>
+=======
+	<name>BinarySearch</name>
+>>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c:Ankit/java_exercise/BinarySearch/.project
+=======
+	<name>bubblesort</name>
+>>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c
 	<comment></comment>
 	<projects>
 	</projects>

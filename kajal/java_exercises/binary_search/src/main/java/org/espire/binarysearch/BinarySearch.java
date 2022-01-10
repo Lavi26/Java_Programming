@@ -4,7 +4,10 @@ package org.espire.binarysearch;
  * Binary search
  */
 public class BinarySearch {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c
 	// recursive method for binary search
 	public static int binarySearch(int arr[], int first, int last, int key) {
 		// if array is in order then perform binary search on the array
