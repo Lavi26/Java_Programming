@@ -7,8 +7,8 @@ import org.junit.Test;
 public class TestRemoveDuplicatesFromArray {
 
 	@Test
-	public void test() {
-		assertEquals(("ABC"),RemoveDuplicatesFromArray.removeDup("ABC"));
+	public void testRemoveDuplicatesFromArray() {
+		assertEquals(("ABC"), RemoveDuplicatesFromArray.removeDup("ABC"));
 
-}
+	}
 }

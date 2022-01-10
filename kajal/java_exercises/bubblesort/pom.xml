@@ -5,13 +5,5 @@
     <artifactId>java_exercises</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-<<<<<<< HEAD
-<<<<<<< HEAD:kajal/java_exercises/bubblesort/pom.xml
   <artifactId>bubblesort</artifactId>
-=======
-  <artifactId>binarySearch</artifactId>
->>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c:Gurleen/java_exercises/binarySearch/pom.xml
-=======
-  <artifactId>bubblesort</artifactId>
->>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c
 </project>

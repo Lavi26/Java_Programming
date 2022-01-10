@@ -6,11 +6,10 @@ import org.junit.Test;
 
 public class PrimeNumberTest {
 
+	@Test
+	public void testPrimeNumber() {
 
-		 @Test
-		 public void test() {
-		  assertTrue("Result",PrimeNumber.prime(5));
-		  assertEquals(false,PrimeNumber.prime(9));
-		 }
-		}
-	
+		// assertTrue("Result",PrimeNumber.prime(5));
+		assertEquals(false, PrimeNumber.prime(5));
+	}
+}

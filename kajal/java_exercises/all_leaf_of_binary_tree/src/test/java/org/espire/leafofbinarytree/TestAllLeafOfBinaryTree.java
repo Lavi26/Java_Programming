@@ -5,17 +5,17 @@ import org.junit.Test;
 
 public class TestAllLeafOfBinaryTree {
 
-	
 	class TreePracticeTest {
 		@Test
 		public void testLeafNode() {
-			AllLeafOfBinaryTree.printLeaves(null); 
+			AllLeafOfBinaryTree.printLeaves(null);
 			new TreeNode("d");
 			new TreeNode("e");
 			new TreeNode("g");
-			TreeNode node=new TreeNode("d,e,g");
-			
-			AllLeafOfBinaryTree.printLeaves( node);
+			TreeNode node = new TreeNode("d,e,g");
+
+			AllLeafOfBinaryTree.printLeaves(node);
 		}
-		
-}}
+
+	}
+}

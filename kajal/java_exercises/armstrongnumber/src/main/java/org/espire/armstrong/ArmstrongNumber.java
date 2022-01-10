@@ -4,10 +4,7 @@ package org.espire.armstrong;
  * a program to check if the given number is Armstrong number or not
  */
 public class ArmstrongNumber {
-<<<<<<< HEAD
-=======
 
->>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c
 	// main method
 	public static void main(String[] args) {
 		int number = 153;
@@ -39,8 +36,4 @@ public class ArmstrongNumber {
 			return false;
 		}
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 825caa0e5b94ed926fe7798db25d2269b6e26e2c
