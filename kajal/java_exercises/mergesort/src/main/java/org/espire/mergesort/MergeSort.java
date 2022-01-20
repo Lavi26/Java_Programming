@@ -2,12 +2,12 @@ package org.espire.mergesort;
 
 /*Write a program to implement merge sort algorithm */
 
-  public class MergeSort {
+public class MergeSort {
 
-  // Merges two subarrays of array.
+	// Merges two sub arrays of array.
 
 	void merge(int arr[], int left, int mid, int right) {
-		// Find sizes of two subarrays to be merged
+		// Find sizes of two sub arrays to be merged
 		int n1 = mid - left + 1;
 		int n2 = right - mid;
 

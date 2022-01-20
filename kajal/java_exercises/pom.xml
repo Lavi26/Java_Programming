@@ -39,6 +39,9 @@
 		<module>bucket_sort</module>
 
 		<module>vendingmachine</module>
+		<module>vending_machine</module>
+		<module>vendingmachinemethod2</module>
+		
 	</modules>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
