@@ -15,6 +15,7 @@ import com.org.espire.spring.service.AuthenticationEmployeeDetailService;
 
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	@Autowired
@@ -24,18 +25,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.cors().and().csrf().disable().authorizeRequests()
-
 				// allowing to access our register API endpoint without authentication
 				.antMatchers(HttpMethod.POST, AuthenticationConstant.SIGN_UP_URL).permitAll()
-				//.antMatchers(HttpMethod.GET, AuthenticationConstant.SIGN_UP_TEST_URL).permitAll()
-				// This will authenticate each request coming to our API
 				.anyRequest().authenticated().and()
+				.httpBasic();
 				// Introducing authentication filter
-				.addFilter(new JWTAuthenticationFilter(authenticationManager()))
-				// Introducing authorization filter
-				.addFilter(new JWTAuthorizationFilter(authenticationManager()))
-
-				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+				//.addFilter(new JWTAuthenticationFilter(authenticationManager()))
+				//.addFilter(new JWTAuthorizationFilter(authenticationManager()))
+				//.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}
 
 	// allow authentication manager to authenticate

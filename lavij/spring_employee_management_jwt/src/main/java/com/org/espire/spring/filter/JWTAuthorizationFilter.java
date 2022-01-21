@@ -23,7 +23,6 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 		super(authenticationManager);
 	}
 
-	
 	//this method is capable of capturing incoming requests and allow or block the request after validating it
 	//check is there any token present
 	@Override
